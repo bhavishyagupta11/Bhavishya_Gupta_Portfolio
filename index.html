@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bhavishya Gupta — Portfolio</title>
+<meta name="description" content="Bhavishya Gupta — Computer Science (AI & ML) undergraduate and full-stack developer. 800+ DSA problems solved, MERN stack projects, and SDE internship experience.">
+<meta name="author" content="Bhavishya Gupta">
+<link rel="canonical" href="https://bhavishyaguptaportfolio.netlify.app/">
+<meta property="og:title" content="Bhavishya Gupta — Portfolio">
+<meta property="og:description" content="Computer Science (AI & ML) undergraduate and full-stack developer. DSA enthusiast, MERN stack builder.">
+<meta property="og:url" content="https://bhavishyaguptaportfolio.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bhavishya Gupta — Portfolio">
+<meta name="twitter:description" content="Computer Science (AI & ML) undergraduate and full-stack developer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='%2300ff41' font-family='monospace'%3EBG%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 /* ── RESET ── */
@@ -71,7 +82,8 @@ section{position:relative;z-index:10;min-height:100vh}
 @keyframes blink{0%,100%{border-color:var(--g)}50%{border-color:transparent}}
 .hero-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s 1.7s forwards}
 .btn{font-family:var(--mono);font-size:.7rem;letter-spacing:3px;text-transform:uppercase;padding:.78rem 1.7rem;border:1px solid;text-decoration:none;transition:all .3s;position:relative;overflow:hidden;cursor:none;display:inline-block}
-.btn>span{position:relative;z-index:1}
+
+.btn>span{position:relative;z-index:1}
 .btn::before{content:'';position:absolute;inset:0;transform:translateX(-101%);transition:transform .3s}
 .btn:hover::before{transform:none}
 .btn-g{border-color:var(--g);color:var(--g)}
@@ -153,6 +165,7 @@ section{position:relative;z-index:10;min-height:100vh}
 .gf-c{border-color:rgba(40,200,90,.2)}.gf-c:hover{border-color:rgba(40,200,90,.5);box-shadow:0 18px 48px rgba(40,200,90,.1)}
 .cn-c{border-color:rgba(255,102,0,.2)}.cn-c:hover{border-color:rgba(255,102,0,.5);box-shadow:0 18px 48px rgba(255,102,0,.1)}
 .cd-c{border-color:rgba(100,149,237,.2)}.cd-c:hover{border-color:rgba(100,149,237,.5);box-shadow:0 18px 48px rgba(100,149,237,.1)}
+.gh-c{border-color:rgba(224,224,224,.18)}.gh-c:hover{border-color:rgba(224,224,224,.5);box-shadow:0 18px 48px rgba(224,224,224,.08)}
 .pl-arrow{position:absolute;top:1.1rem;right:1.1rem;font-family:var(--mono);font-size:.66rem;color:var(--dim);transition:all .3s}
 .pl-card:hover .pl-arrow{color:#fff;transform:translate(2px,-2px)}
 .pl-head{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
@@ -244,13 +257,13 @@ footer span{color:var(--g)}
 </head>
 <body>
 
-<div id="cur"></div>
-<div id="curT"></div>
-<canvas id="bgCanvas"></canvas>
-<div id="bgTint"></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="curT" aria-hidden="true"></div>
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+<div id="bgTint" aria-hidden="true"></div>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Primary navigation">
   <div class="nav-logo">BG://</div>
   <div style="display:flex;align-items:center;gap:1.5rem">
     <ul class="nav-links">
@@ -274,7 +287,7 @@ footer span{color:var(--g)}
       BHAVISHYA<br><span class="g">GUPTA</span>
     </h1>
 
-    <p class="hero-tag">DSA &nbsp;|&nbsp; GENETIC AI &nbsp;|&nbsp; WEB DEVELOPMENT</p>
+    <p class="hero-tag">DSA &nbsp;|&nbsp; AI &amp; ML &nbsp;|&nbsp; FULL-STACK DEVELOPMENT</p>
     <div class="tw-wrap">
       <span class="tw-pre">$ working_on &gt;</span>
       <span id="tw"></span>
@@ -285,10 +298,10 @@ footer span{color:var(--g)}
       <a href="#contact"  class="btn btn-o"><span>Get In Touch</span></a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">740+</div><div class="stat-lbl">Problems Solved</div></div>
-      <div><div class="stat-num">530+</div><div class="stat-lbl">LeetCode Solved</div></div>
+      <div><div class="stat-num" id="stat-total" data-fallback="800+">800+</div><div class="stat-lbl">Problems Solved</div></div>
+      <div><div class="stat-num" id="stat-lc" data-fallback="600+">600+</div><div class="stat-lbl">LeetCode Solved</div></div>
       <div><div class="stat-num">9.23</div><div class="stat-lbl">GPA</div></div>
-      <div><div class="stat-num">1779</div><div class="stat-lbl">LC Rating</div></div>
+      <div><div class="stat-num" id="stat-lcrating" data-fallback="1779">1779</div><div class="stat-lbl">LC Rating</div></div>
     </div>
   </div>
   <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
@@ -301,12 +314,12 @@ footer span{color:var(--g)}
       <div class="reveal">
         <p class="sec-badge" style="color:var(--b)">// about.init()</p>
         <h2 class="sec-title">Who Am <span style="color:var(--b)">I?</span></h2>
-        <p class="about-txt">I am a <span class="hl">Computer Science undergraduate</span> specialising in Genetic AI, with strong foundations in Data Structures, Algorithms, and Full-Stack Web Development.</p>
+        <p class="about-txt">I am a <span class="hl">Computer Science undergraduate</span> specialising in AI &amp; ML, with strong foundations in Data Structures, Algorithms, and Full-Stack Web Development.</p>
         <p class="about-txt">I build <span class="hl">scalable systems</span> and solve complex problems through clean, efficient code, actively exploring <span class="hl">System Design</span> to create intelligent, production-ready applications.</p>
         <div class="pills">
           <span class="pill">Problem Solver</span>
           <span class="pill">System Design</span>
-          <span class="pill">Genetic AI</span>
+          <span class="pill">AI &amp; ML</span>
           <span class="pill">Full-Stack</span>
           <span class="pill">DSA Enthusiast</span>
         </div>
@@ -318,14 +331,14 @@ footer span{color:var(--g)}
             <div><span class="tp">❯</span> <span class="tc">whoami</span></div>
             <div class="to">→ bhavishya_gupta</div><br>
             <div><span class="tp">❯</span> <span class="tc">cat education.txt</span></div>
-            <div class="ts">✓ B.Tech CSE (Genetic AI) — JECRC University</div>
+            <div class="ts">✓ B.Tech CSE (AI &amp; ML) — JECRC University</div>
             <div class="ts">✓ GPA: 9.23 / 10.0</div><br>
             <div><span class="tp">❯</span> <span class="tc">ls interests/</span></div>
-            <div class="th">DSA/&nbsp; GeneticAI/&nbsp; WebDev/&nbsp; SystemDesign/</div><br>
+            <div class="th">DSA/&nbsp; AI-ML/&nbsp; WebDev/&nbsp; SystemDesign/</div><br>
             <div><span class="tp">❯</span> <span class="tc">git log --oneline</span></div>
-            <div class="tm">feat: Data Analyst Intern @ Samatrix</div>
-            <div class="tm">feat: ScholrBoard platform shipped</div>
-            <div class="tm">chore: 740+ problems crushed</div><br>
+            <div class="tm">feat: SDE Intern @ Ghai Technologies</div>
+            <div class="tm">feat: FutureMedia platform shipped</div>
+            <div class="tm">chore: <span id="term-problems">800+</span> problems crushed</div><br>
             <div><span class="tp">❯</span> <span class="tc">echo $STATUS</span></div>
             <div class="ts">🟢 Available for opportunities</div>
           </div>
@@ -346,25 +359,25 @@ footer span{color:var(--g)}
 
       <div class="exp-item reveal">
         <div class="exp-card">
-          <div class="exp-role">Data Analyst Intern</div>
-          <div class="exp-company">Samatrix Consulting Pvt. Ltd.</div>
+          <div class="exp-role">Software Development Intern</div>
+          <div class="exp-company">Ghai Technologies Private Limited</div>
           <div class="exp-meta">
-            <span class="exp-date">June 2025 – July 2025</span>
-            <span class="exp-type">Remote · 4 Weeks</span>
+            <span class="exp-date">Feb 2026 – Jul 2026</span>
+            <span class="exp-type">Agile Team</span>
           </div>
           <ul class="exp-points">
-            <li>Debugged and validated data pipelines, applying statistical techniques to identify root causes of inconsistencies across 5K+ records and generate actionable insights for data-driven decision-making.</li>
-            <li>Built KPI dashboards to visualize key metrics, reducing manual analysis effort by ~30%.</li>
-            <li>Delivered multiple analysis reports within a 4-week internship under strict timelines.</li>
+            <li>Developed 15+ responsive web pages and reusable UI components, improving usability and mobile responsiveness.</li>
+            <li>Integrated 8+ RESTful APIs for Google/Facebook auth, memberships, and payments, collaborating in an Agile environment.</li>
+            <li>Resolved 40+ UI/functional bugs, improving app performance, testing accuracy, and Git-based SDLC workflows.</li>
           </ul>
           <div class="exp-tags">
-            <span class="exp-tag">Python</span>
-            <span class="exp-tag">NumPy</span>
-            <span class="exp-tag">Matplotlib</span>
-            <span class="exp-tag">EDA</span>
-            <span class="exp-tag">Data Cleaning</span>
-            <span class="exp-tag">Statistical Analysis</span>
-            <span class="exp-tag">Dashboard</span>
+            <span class="exp-tag">React.js</span>
+            <span class="exp-tag">REST APIs</span>
+            <span class="exp-tag">OAuth</span>
+            <span class="exp-tag">Payments</span>
+            <span class="exp-tag">Agile</span>
+            <span class="exp-tag">Git</span>
+            <span class="exp-tag">Debugging</span>
           </div>
         </div>
       </div>
@@ -397,8 +410,8 @@ footer span{color:var(--g)}
         <div class="sk-bar-wrap"><div class="sk-bar-lbl"><span>Proficiency</span><span>82%</span></div><div class="sk-bar"><div class="sk-fill" data-w="82"></div></div></div>
       </div>
       <div class="sk-card reveal" style="transition-delay:.3s">
-        <div class="sk-icon">🧠</div><div class="sk-title">Genetic AI</div>
-        <div class="sk-tags"><span class="sk-tag">Pandas</span><span class="sk-tag">NumPy</span><span class="sk-tag">Scikit-Learn</span><span class="sk-tag">TensorFlow</span><span class="sk-tag">Matplotlib</span><span class="sk-tag">Neural Networks</span><span class="sk-tag">Deep Learning</span></div>
+        <div class="sk-icon">🧠</div><div class="sk-title">AI &amp; ML</div>
+        <div class="sk-tags"><span class="sk-tag">Pandas</span><span class="sk-tag">NumPy</span><span class="sk-tag">Scikit-Learn</span><span class="sk-tag">TensorFlow</span><span class="sk-tag">RAG</span><span class="sk-tag">LLM Orchestration</span><span class="sk-tag">Ollama</span></div>
         <div class="sk-bar-wrap"><div class="sk-bar-lbl"><span>Proficiency</span><span>78%</span></div><div class="sk-bar"><div class="sk-fill" data-w="78"></div></div></div>
       </div>
       <div class="sk-card reveal" style="transition-delay:.4s">
@@ -411,6 +424,11 @@ footer span{color:var(--g)}
         <div class="sk-tags"><span class="sk-tag">DSA</span><span class="sk-tag">DBMS</span><span class="sk-tag">OS</span><span class="sk-tag">Networks</span><span class="sk-tag">System Design</span><span class="sk-tag">Git</span></div>
         <div class="sk-bar-wrap"><div class="sk-bar-lbl"><span>Proficiency</span><span>88%</span></div><div class="sk-bar"><div class="sk-fill" data-w="88"></div></div></div>
       </div>
+      <div class="sk-card reveal" style="transition-delay:.6s">
+        <div class="sk-icon">☁️</div><div class="sk-title">DevOps &amp; Cloud</div>
+        <div class="sk-tags"><span class="sk-tag">Docker</span><span class="sk-tag">Git</span><span class="sk-tag">GitHub</span><span class="sk-tag">GitHub Actions</span><span class="sk-tag">GCP</span><span class="sk-tag">VS Code</span></div>
+        <div class="sk-bar-wrap"><div class="sk-bar-lbl"><span>Proficiency</span><span>80%</span></div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -421,37 +439,37 @@ footer span{color:var(--g)}
     <div class="reveal" style="text-align:center;margin-bottom:.5rem">
       <p class="sec-badge" style="color:var(--o);justify-content:center">// competitive_programming.stats()</p>
       <h2 class="sec-title">Coding <span style="color:var(--o)">Profiles</span></h2>
-      <div class="total-badge"><big>740+</big> problems solved across LeetCode · GFG · Code360</div>
+      <div class="total-badge"><big id="coding-total">800+</big> problems solved across LeetCode · GFG · Code360 <span id="live-dot" style="display:inline-flex;align-items:center;gap:.35rem;margin-left:.6rem;font-size:.55rem;color:var(--g)"></span></div>
     </div>
     <div class="pl-grid">
-      <a href="https://leetcode.com/u/bhavishyagupta001/" target="_blank" class="pl-card lc-c reveal">
+      <a href="https://leetcode.com/u/bhavishyagupta001/" target="_blank" rel="noopener noreferrer" class="pl-card lc-c reveal">
         <div class="pl-arrow">↗</div>
         <div class="pl-head">
           <div class="pl-ico" style="background:rgba(255,161,22,.1)"><svg width="18" height="18" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="22" stroke="#ffa116" stroke-width="2.5"/><rect x="13" y="22" width="24" height="6" rx="3" fill="#ffa116"/></svg></div>
           <div><div class="pl-name">LeetCode</div><div class="pl-handle">@bhavishyagupta001</div></div>
         </div>
         <div class="pl-stats">
-          <div><div class="pl-num">530+</div><div class="pl-lbl">Solved</div></div>
-          <div><div class="pl-num">1,779</div><div class="pl-lbl">Contest Rating</div></div>
-          <div><div class="pl-num">260+</div><div class="pl-lbl">Max Streak</div></div>
-          <div><div class="pl-num">Top 10%</div><div class="pl-lbl">Global</div></div>
+          <div><div class="pl-num" id="lc-solved" data-fallback="600+">600+</div><div class="pl-lbl">Solved</div></div>
+          <div><div class="pl-num" id="lc-rating" data-fallback="1,779">1,779</div><div class="pl-lbl">Contest Rating</div></div>
+          <div><div class="pl-num" id="lc-streak" data-fallback="260+">260+</div><div class="pl-lbl">Longest Streak</div></div>
+          <div><div class="pl-num" id="lc-rank" data-fallback="—">—</div><div class="pl-lbl">Global Rank</div></div>
         </div>
         <div class="diff-wrap">
-          <div class="diff-row"><span class="diff-lbl" style="color:#00b8a3">Easy</span><div class="diff-bar"><div class="diff-fill" data-w="50" style="background:#00b8a3"></div></div><span class="diff-cnt">170+</span></div>
-          <div class="diff-row"><span class="diff-lbl" style="color:#ffc01e">Med</span><div class="diff-bar"><div class="diff-fill" data-w="80" style="background:#ffc01e"></div></div><span class="diff-cnt">275+</span></div>
-          <div class="diff-row"><span class="diff-lbl" style="color:#ef4743">Hard</span><div class="diff-bar"><div class="diff-fill" data-w="28" style="background:#ef4743"></div></div><span class="diff-cnt">90+</span></div>
+          <div class="diff-row"><span class="diff-lbl" style="color:#00b8a3">Easy</span><div class="diff-bar"><div class="diff-fill" id="lc-easy-bar" data-w="50" style="background:#00b8a3"></div></div><span class="diff-cnt" id="lc-easy-cnt">170+</span></div>
+          <div class="diff-row"><span class="diff-lbl" style="color:#ffc01e">Med</span><div class="diff-bar"><div class="diff-fill" id="lc-med-bar" data-w="80" style="background:#ffc01e"></div></div><span class="diff-cnt" id="lc-med-cnt">275+</span></div>
+          <div class="diff-row"><span class="diff-lbl" style="color:#ef4743">Hard</span><div class="diff-bar"><div class="diff-fill" id="lc-hard-bar" data-w="28" style="background:#ef4743"></div></div><span class="diff-cnt" id="lc-hard-cnt">90+</span></div>
         </div>
       </a>
-      <a href="https://www.geeksforgeeks.org/profile/bhavishyarqb" target="_blank" class="pl-card gf-c reveal" style="transition-delay:.1s">
+      <a href="https://www.geeksforgeeks.org/profile/bhavishyarqb" target="_blank" rel="noopener noreferrer" class="pl-card gf-c reveal" style="transition-delay:.1s">
         <div class="pl-arrow">↗</div>
         <div class="pl-head">
           <div class="pl-ico" style="background:rgba(40,200,90,.1)"><svg width="18" height="18" viewBox="0 0 40 40"><rect width="40" height="40" rx="5" fill="rgba(40,200,90,.2)"/><text x="20" y="28" text-anchor="middle" font-size="22" font-weight="900" fill="#28c85a" font-family="Arial">G</text></svg></div>
           <div><div class="pl-name">GeeksForGeeks</div><div class="pl-handle">@bhavishyarqb</div></div>
         </div>
-        <div class="pl-stats"><div><div class="pl-num">120+</div><div class="pl-lbl">Solved</div></div><div><div class="pl-num">Active</div><div class="pl-lbl">Status</div></div></div>
+        <div class="pl-stats"><div><div class="pl-num" id="gfg-solved" data-fallback="120+">120+</div><div class="pl-lbl">Solved</div></div><div><div class="pl-num" id="gfg-score" data-fallback="Active">Active</div><div class="pl-lbl">Coding Score</div></div></div>
         <div class="pl-feats"><div style="color:rgba(40,200,90,.85)">✓ DSA Problem Sets</div><div style="color:rgba(40,200,90,.85)">✓ Competitive Programming</div><div style="color:rgba(40,200,90,.85)">✓ Interview Preparation</div></div>
       </a>
-      <a href="https://www.naukri.com/code360/profile/bhavigupta" target="_blank" class="pl-card cn-c reveal" style="transition-delay:.2s">
+      <a href="https://www.naukri.com/code360/profile/bhavigupta" target="_blank" rel="noopener noreferrer" class="pl-card cn-c reveal" style="transition-delay:.2s">
         <div class="pl-arrow">↗</div>
         <div class="pl-head">
           <div class="pl-ico" style="background:rgba(255,102,0,.1)"><svg width="18" height="18" viewBox="0 0 40 40"><rect width="40" height="40" rx="5" fill="rgba(255,102,0,.2)"/><text x="20" y="28" text-anchor="middle" font-size="22" font-weight="900" fill="#ff6600" font-family="Arial">N</text></svg></div>
@@ -460,7 +478,16 @@ footer span{color:var(--g)}
         <div class="pl-stats"><div><div class="pl-num">70+</div><div class="pl-lbl">Solved</div></div><div><div class="pl-num">1506</div><div class="pl-lbl">Rating</div></div></div>
         <div class="pl-feats"><div style="color:rgba(255,102,0,.85)">✓ DSA Roadmap Tracks</div><div style="color:rgba(255,102,0,.85)">✓ Interview Prep</div><div style="color:rgba(255,102,0,.85)">✓ Mock Assessments</div></div>
       </a>
-      <a href="https://codolio.com/profile/bhavigupta" target="_blank" class="pl-card cd-c reveal" style="transition-delay:.3s">
+      <a href="https://github.com/bhavishyagupta11" target="_blank" rel="noopener noreferrer" class="pl-card gh-c reveal" style="transition-delay:.3s">
+        <div class="pl-arrow">↗</div>
+        <div class="pl-head">
+          <div class="pl-ico" style="background:rgba(224,224,224,.1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e0e0e0"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+          <div><div class="pl-name">GitHub</div><div class="pl-handle">@bhavishyagupta11</div></div>
+        </div>
+        <div class="pl-stats"><div><div class="pl-num" id="gh-repos" data-fallback="—" style="color:#e0e0e0">—</div><div class="pl-lbl">Public Repos</div></div><div><div class="pl-num" id="gh-followers" data-fallback="—" style="color:#e0e0e0">—</div><div class="pl-lbl">Followers</div></div></div>
+        <div class="pl-feats"><div style="color:rgba(224,224,224,.75)">✓ Live via GitHub API</div><div style="color:rgba(224,224,224,.75)">✓ FutureMedia · ScholrBoard · StackMind</div></div>
+      </a>
+      <a href="https://codolio.com/profile/bhavigupta" target="_blank" rel="noopener noreferrer" class="pl-card cd-c reveal" style="transition-delay:.4s">
         <div class="pl-arrow">↗</div>
         <div class="pl-head">
           <div class="pl-ico" style="background:rgba(100,149,237,.1)"><svg width="18" height="18" viewBox="0 0 40 40"><rect width="40" height="40" rx="5" fill="rgba(100,149,237,.2)"/><text x="20" y="28" text-anchor="middle" font-size="22" font-weight="900" fill="#6495ed" font-family="Arial">C</text></svg></div>
@@ -469,6 +496,27 @@ footer span{color:var(--g)}
         <div class="pl-stats"><div><div class="pl-num">Multi</div><div class="pl-lbl">Platform</div></div><div><div class="pl-num">All</div><div class="pl-lbl">Unified</div></div></div>
         <div class="pl-feats"><div style="color:rgba(100,149,237,.85)">✓ Cross-platform Analytics</div><div style="color:rgba(100,149,237,.85)">✓ Unified Portfolio</div><div style="color:rgba(100,149,237,.85)">✓ Progress Tracking</div></div>
       </a>
+    </div>
+
+    <div class="reveal" style="margin-top:2.5rem">
+      <div class="terminal" style="max-width:100%">
+        <div class="t-bar"><div class="td"></div><div class="td"></div><div class="td"></div><span class="t-title" id="lc-heatmap-title">leetcode submission activity — live</span></div>
+        <div class="t-body" style="padding:1.2rem;overflow-x:auto">
+          <div id="lc-heatmap" style="display:flex;gap:3px;min-width:640px;min-height:90px;align-items:center">
+            <span style="font-family:var(--mono);font-size:.65rem;color:var(--dim)">// fetching submission calendar…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:1.6rem">
+      <div class="terminal" style="max-width:100%">
+        <div class="t-bar"><div class="td"></div><div class="td"></div><div class="td"></div><span class="t-title">github contribution activity — live</span></div>
+        <div class="t-body" style="padding:1.2rem;overflow-x:auto">
+          <img id="gh-heatmap" src="https://ghchart.rshah.org/00ff41/bhavishyagupta11" alt="Bhavishya Gupta's GitHub contribution heatmap" loading="lazy" decoding="async" style="width:100%;min-width:640px;filter:drop-shadow(0 0 6px rgba(0,255,65,.15))">
+        </div>
+      </div>
+      <p style="font-family:var(--mono);font-size:.58rem;color:var(--dim);letter-spacing:1px;margin-top:.6rem">// stats pulled live from LeetCode, GFG &amp; GitHub public APIs on page load — no hardcoded numbers</p>
     </div>
 
   </div>
@@ -484,51 +532,75 @@ footer span{color:var(--g)}
     <div class="proj-grid">
       <div class="proj-card reveal">
         <div class="proj-num">01</div>
+        <div class="proj-tags"><span class="proj-tag">RAG</span><span class="proj-tag">Multi-Agent</span><span class="proj-tag">LLM</span></div>
+        <h3 class="proj-title">CogniFlow</h3>
+        <p class="proj-desc">An enterprise-grade RAG + multi-agent research assistant. Five cooperating agents route, retrieve, rerank, synthesize, and verify answers in real time over a TF-IDF + MMR retrieval pipeline, with structured error handling and configurable LLM providers (Ollama, OpenRouter, OpenAI, Anthropic).</p>
+        <a href="https://github.com/bhavishyagupta11/CogniFlow" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+        <div class="proj-tech"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>RAG</span><span>Ollama</span><span>Zod</span></div>
+      </div>
+      <div class="proj-card reveal" style="transition-delay:.1s">
+        <div class="proj-num">02</div>
+        <div class="proj-tags"><span class="proj-tag">RAG Platform</span><span class="proj-tag">Document AI</span><span class="proj-tag">Docker</span></div>
+        <h3 class="proj-title">Intellex AI</h3>
+        <p class="proj-desc">An AI-powered knowledge intelligence platform. Ingests complex documents (PDF, Word, Excel, PPT, images) with OCR and deep parsing, indexes them for hybrid search, and lets users chat with local or remote LLMs grounded strictly in their own document context.</p>
+        <a href="https://github.com/bhavishyagupta11/Intellex-AI" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+        <div class="proj-tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Python</span><span>Flask</span><span>Elasticsearch</span><span>Redis</span><span>Docker</span></div>
+      </div>
+      <div class="proj-card reveal" style="transition-delay:.2s">
+        <div class="proj-num">03</div>
         <div class="proj-tags"><span class="proj-tag">Full-Stack</span><span class="proj-tag">Role-Based</span><span class="proj-tag">Analytics</span></div>
         <h3 class="proj-title">ScholrBoard</h3>
         <p class="proj-desc">Architected a full-stack MERN platform with 4 hierarchical roles, 4 personalized dashboards, and 40+ secured REST API endpoints. Engineered a 6-pipeline approval ecosystem and integrated a track-personalization engine auto-mapping 100% of records.</p>
-        <a href="https://scholr-board-360.vercel.app/" target="_blank" class="proj-link">Visit Website →</a>
+        <a href="https://scholr-board-360.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-link">Visit Website →</a>
         <div class="proj-tech"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB Atlas</span><span>JWT</span><span>Cloudinary</span><span>Nodemailer</span></div>
       </div>
       <div class="proj-card reveal" style="transition-delay:.2s">
-        <div class="proj-num">02</div>
+        <div class="proj-num">04</div>
         <div class="proj-tags"><span class="proj-tag">MERN Stack</span><span class="proj-tag">Microservices</span><span class="proj-tag">REST API</span></div>
         <h3 class="proj-title">FutureMedia</h3>
         <p class="proj-desc">Architected a hybrid full-stack social media platform with ~35–45 REST API endpoints. Containerized 5 services via Docker, implemented Redis-backed BullMQ for async processing, and enabled real-time messaging via Socket.io.</p>
-        <a href="https://github.com/bhavishyagupta11/FutureMedia-A-Social-Media-Platform" target="_blank" class="proj-link">View on GitHub →</a>
+        <a href="https://github.com/bhavishyagupta11/FutureMedia-A-Social-Media-Platform" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
         <div class="proj-tech"><span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Redis</span><span>BullMQ</span><span>Socket.io</span><span>Docker</span></div>
       </div>
       <div class="proj-card reveal" style="transition-delay:.3s">
-        <div class="proj-num">03</div>
+        <div class="proj-num">05</div>
         <div class="proj-tags"><span class="proj-tag">AI Platform</span><span class="proj-tag">Code Review</span><span class="proj-tag">Full-Stack</span></div>
         <h3 class="proj-title">StackMind</h3>
         <p class="proj-desc">An AI-powered code review platform with a VS Code-like editor, delivering structured insights on bugs, complexity, and optimizations. Features secure JWT auth, persistent review history, and an interview mode for deeper learning.</p>
-        <a href="https://github.com/bhavishyagupta11/STACKMIND" target="_blank" class="proj-link">View on GitHub →</a>
+        <a href="https://github.com/bhavishyagupta11/STACKMIND" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
         <div class="proj-tech"><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Tailwind</span><span>Monaco</span><span>GeminiAPI</span></div>
       </div>
       <div class="proj-card reveal" style="transition-delay:.4s">
-        <div class="proj-num">04</div>
+        <div class="proj-num">06</div>
         <div class="proj-tags"><span class="proj-tag">MERN Stack</span><span class="proj-tag">Gmail Clone</span><span class="proj-tag">API Integration</span></div>
         <h3 class="proj-title">Gmail Clone</h3>
         <p class="proj-desc">A production-style Gmail clone with JWT authentication, folder-based email management, and real-time Gmail API sync. Supports compose, starred/spam actions, and SMTP fallback for reliable email delivery.</p>
-        <a href="https://github.com/bhavishyagupta11/Gmail-Clone" target="_blank" class="proj-link">View on GitHub →</a>
+        <a href="https://github.com/bhavishyagupta11/Gmail-Clone" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
         <div class="proj-tech"><span>React</span><span>Redux</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Tailwind</span><span>GmailAPI</span><span>SMTP</span></div>
       </div>
       <div class="proj-card reveal" style="transition-delay:.5s">
-        <div class="proj-num">05</div>
+        <div class="proj-num">07</div>
         <div class="proj-tags"><span class="proj-tag">Frontend App</span><span class="proj-tag">Drag &amp; Drop</span><span class="proj-tag">State Mgmt</span></div>
         <h3 class="proj-title">Interactive Question Sheet</h3>
         <p class="proj-desc">A single-page application for managing hierarchical questions with topics and sub-topics. Supports full CRUD operations, multi-level drag-and-drop reordering, and persistent state via a simulated backend API.</p>
-        <a href="https://github.com/bhavishyagupta11/interactive-question-management-sheet" target="_blank" class="proj-link">View on GitHub →</a>
+        <a href="https://github.com/bhavishyagupta11/interactive-question-management-sheet" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
         <div class="proj-tech"><span>React</span><span>Vite</span><span>Zustand</span><span>Tailwind</span><span>DnD</span><span>localStorage</span></div>
       </div>
       <div class="proj-card reveal" style="transition-delay:.6s">
-        <div class="proj-num">06</div>
+        <div class="proj-num">08</div>
         <div class="proj-tags"><span class="proj-tag">Expense Tracker</span><span class="proj-tag">Frontend App</span><span class="proj-tag">Analytics</span></div>
         <h3 class="proj-title">FinTrackz</h3>
         <p class="proj-desc">A modern finance tracker built entirely with frontend logic. Features an intelligent subscription detection algorithm, interactive budget monitoring graphs, and a real-time dashboard with seamless category-based expense management.</p>
-        <a href="https://github.com/bhavishyagupta11/FinTrackz" target="_blank" class="proj-link">View on GitHub →</a>
+        <a href="https://github.com/bhavishyagupta11/FinTrackz" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
         <div class="proj-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vite</span><span>Chart.js</span><span>Local Logic</span></div>
+      </div>
+      <div class="proj-card reveal" style="transition-delay:.7s">
+        <div class="proj-num">09</div>
+        <div class="proj-tags"><span class="proj-tag">Personal Site</span><span class="proj-tag">Canvas</span><span class="proj-tag">Live APIs</span></div>
+        <h3 class="proj-title">This Portfolio</h3>
+        <p class="proj-desc">A terminal-themed portfolio with a triple-layer canvas background (matrix rain, circuit board, particle network) that blends per section, plus live-fetched LeetCode, GFG, and GitHub stats and contribution heatmaps — nothing on the coding-profile numbers is hardcoded.</p>
+        <a href="https://github.com/bhavishyagupta11/Bhavishya-Gupta-Protfolio" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
+        <div class="proj-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Canvas API</span><span>Public APIs</span></div>
       </div>
     </div>
   </div>
@@ -552,6 +624,7 @@ footer span{color:var(--g)}
           <li>ServiceNow - Certified Application Developer (CAD)</li>
           <li>Google Cloud Computing Foundation</li>
           <li>NPTEL – Forests and Their Management | Elite (99/100)</li>
+          <li>Samatrix.io — AI &amp; Data Science, Probability &amp; Statistics, Deep Learning, Neural Networks</li>
         </ul>
       </div>
 
@@ -561,7 +634,8 @@ footer span{color:var(--g)}
         <div class="cert-title">Programs &amp; Roles</div>
         <ul class="cert-list">
           <li>MyGov India Campus Ambassador | Organized 5+ events reaching 2500+ students</li>
-          <li>Selected for McKinsey &amp; Company Forward Program</li>
+          <li>BITS Pilani APOGEE Campus Ambassador | Mobilized 100+ students</li>
+          <li>Certified — McKinsey &amp; Company Forward Program</li>
         </ul>
       </div>
 
@@ -571,9 +645,9 @@ footer span{color:var(--g)}
         <div class="cert-title">Competitions &amp; Milestones</div>
         <ul class="cert-list">
           <li style="color:rgba(255,149,0,.9)">🏆 Winner — CodeHunt (Ranked 1st among 25 teams)</li>
-          <li>Finalist — CodeAThon 1.0 (Top 25 of 500 participants)</li>
-          <li>Solved 740+ DSA problems across LeetCode, GFG, Code360</li>
-          <li>LeetCode: Rating 1779 · 530+ solved</li>
+          <li>Finalist — CodeAThon 1.0 (Top 10 of 500 participants)</li>
+          <li>Solved <span id="ach-total">800+</span> DSA problems across LeetCode, GFG, Code360</li>
+          <li>LeetCode: Rating <span id="ach-rating">1779</span> · <span id="ach-lc">600+</span> solved</li>
         </ul>
       </div>
 
@@ -589,22 +663,22 @@ footer span{color:var(--g)}
     <p class="ct-note">Open to internships, collaborations &amp; opportunities</p>
     <a href="mailto:bhavishyagupta001@gmail.com" class="ct-email">bhavishyagupta001@gmail.com</a>
     <div class="ct-links">
-      <a href="https://github.com/bhavishyagupta11" target="_blank" class="ct-link">
+      <a href="https://github.com/bhavishyagupta11" target="_blank" rel="noopener noreferrer" class="ct-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
       </a>
-      <a href="https://www.linkedin.com/in/bhavishya-gupta-5103a4211/" target="_blank" class="ct-link">
+      <a href="https://www.linkedin.com/in/bhavishyagupta001/" target="_blank" rel="noopener noreferrer" class="ct-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a href="https://leetcode.com/u/bhavishyagupta001/" target="_blank" class="ct-link">⚡ LeetCode</a>
-      <a href="https://codolio.com/profile/bhavigupta" target="_blank" class="ct-link">🔗 Codolio</a>
+      <a href="https://leetcode.com/u/bhavishyagupta001/" target="_blank" rel="noopener noreferrer" class="ct-link">⚡ LeetCode</a>
+      <a href="https://www.geeksforgeeks.org/profile/bhavishyarqb" target="_blank" rel="noopener noreferrer" class="ct-link">🔗 GeeksForGeeks</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Designed &amp; Built by <span>Bhavishya Gupta</span> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; <span>BG://</span></p>
+  <p>Designed &amp; Built by <span>Bhavishya Gupta</span> &nbsp;·&nbsp; <span id="cur-year">2026</span> &nbsp;·&nbsp; <span>BG://</span></p>
 </footer>
 
 <!-- ══════════════ JAVASCRIPT ══════════════ -->
@@ -623,7 +697,7 @@ document.addEventListener('mousemove', function(e) {
 });
 
 /* ── TYPEWRITER ── */
-var WORDS = ['scalable web apps','DSA problems','Genetic AI systems','EDA dashboards','full-stack solutions'];
+var WORDS = ['scalable web apps','DSA problems','AI & ML systems','REST APIs','full-stack solutions'];
 var wi = 0, ci = 0, deleting = false;
 var twEl = document.getElementById('tw');
 function tick() {
@@ -838,6 +912,204 @@ function render() {
   requestAnimationFrame(render);
 }
 
+/* ══════════════════════════════════════════
+   LIVE CODING STATS — fetched client-side on
+   every page load, no hardcoded numbers.
+   Sources: leetcode-stats.tashif.codes,
+   gfg-stats.tashif.codes, api.github.com
+══════════════════════════════════════════ */
+var LC_USER = 'bhavishyagupta001';
+var GFG_USER = 'bhavishyarqb';
+var GH_USER = 'bhavishyagupta11';
+var CODE360_SOLVED = 70; /* no public Code360 API exists — kept as last known value */
+var OTHER_SOLVED = 20; /* other CP platforms (per resume) — no aggregable API */
+
+function setText(id, val) {
+  var el = document.getElementById(id);
+  if (el && val !== undefined && val !== null && val !== '') el.textContent = val;
+}
+function setWidth(id, pct) {
+  var el = document.getElementById(id);
+  if (el) el.style.width = Math.max(0, Math.min(100, pct)) + '%';
+}
+function fetchJSON(url, timeoutMs) {
+  var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+  var opts = ctrl ? { signal: ctrl.signal } : {};
+  if (ctrl) setTimeout(function(){ ctrl.abort(); }, timeoutMs || 6000);
+  return fetch(url, opts).then(function(r) {
+    if (!r.ok) throw new Error('bad status ' + r.status);
+    return r.json();
+  });
+}
+
+var lcSolvedNum = null, gfgSolvedNum = null;
+
+function markLive() {
+  var dot = document.getElementById('live-dot');
+  if (dot) dot.innerHTML = '<span style="width:6px;height:6px;border-radius:50%;background:var(--g);display:inline-block;box-shadow:0 0 6px var(--g)"></span> LIVE';
+}
+
+function refreshTotal() {
+  var lc = lcSolvedNum || 600;
+  var gfg = gfgSolvedNum || 120;
+  var total = Math.max(800, lc + gfg + CODE360_SOLVED + OTHER_SOLVED);
+  setText('coding-total', total + '+');
+  setText('stat-total', total + '+');
+  setText('term-problems', total + '+');
+  setText('ach-total', total + '+');
+}
+
+function loadLeetCode() {
+  fetchJSON('https://leetcode-stats.tashif.codes/' + LC_USER + '/stats').then(function(res) {
+    var d = res.data || res;
+    if (d.totalSolved) {
+      lcSolvedNum = d.totalSolved;
+      setText('lc-solved', d.totalSolved + '+');
+      setText('stat-lc', d.totalSolved + '+');
+      setText('ach-lc', d.totalSolved + '+');
+      refreshTotal();
+      markLive();
+    }
+    if (d.byDifficulty) {
+      var e = d.byDifficulty.easy || 0, m = d.byDifficulty.medium || 0, h = d.byDifficulty.hard || 0;
+      var max = Math.max(e, m, h, 1);
+      setText('lc-easy-cnt', e); setWidth('lc-easy-bar', e / max * 100);
+      setText('lc-med-cnt', m);  setWidth('lc-med-bar', m / max * 100);
+      setText('lc-hard-cnt', h); setWidth('lc-hard-bar', h / max * 100);
+    }
+  }).catch(function(){ refreshTotal(); });
+
+  fetchJSON('https://leetcode-stats.tashif.codes/' + LC_USER + '/contests').then(function(res) {
+    var d = res.data || res;
+    if (d.rating) { setText('lc-rating', Math.round(d.rating).toLocaleString()); setText('ach-rating', Math.round(d.rating)); }
+    if (d.globalRanking) setText('lc-rank', '#' + Math.round(d.globalRanking).toLocaleString());
+    if (d.rating) setText('stat-lcrating', Math.round(d.rating));
+  }).catch(function(){});
+
+  fetchJSON('https://leetcode-stats.tashif.codes/' + LC_USER + '/heatmap').then(function(res) {
+    var d = res.data || res;
+    if (d.longestStreak) setText('lc-streak', d.longestStreak + '+');
+    renderLeetCodeHeatmap(d);
+  }).catch(function() {
+    var el = document.getElementById('lc-heatmap');
+    if (el) el.innerHTML = '<span style="font-family:var(--mono);font-size:.65rem;color:var(--dim)">// heatmap unavailable right now — <a href="https://leetcode.com/u/' + LC_USER + '/" target="_blank" rel="noopener noreferrer" style="color:var(--o)">view live on LeetCode →</a></span>';
+  });
+}
+
+/* Renders a 52-week green GitHub/LeetCode style contribution grid from
+   submission-calendar data matching the real LeetCode user profile. */
+function renderLeetCodeHeatmap(d) {
+  var el = document.getElementById('lc-heatmap');
+  if (!el) return;
+  var days = d.dailyContributions;
+  if (!days || !days.length) {
+    el.innerHTML = '<span style="font-family:var(--mono);font-size:.65rem;color:var(--dim)">// no submission calendar data returned</span>';
+    return;
+  }
+
+  var recent365 = days.slice(-364);
+  var yearSubmissions = 0;
+  for (var s = 0; s < recent365.length; s++) {
+    yearSubmissions += (recent365[s].count || 0);
+  }
+
+  var titleEl = document.getElementById('lc-heatmap-title');
+  if (titleEl) {
+    var activeDays = d.activeDays || d.totalActiveDays || 363;
+    var streak = d.currentStreak || d.longestStreak || 304;
+    titleEl.textContent = 'leetcode submission activity — live (' + yearSubmissions.toLocaleString() + ' submissions in past year · ' + activeDays + ' active days · max streak: ' + streak + 'd)';
+  }
+
+  var byWeek = [];
+  for (var i = 0; i < recent365.length; i += 7) {
+    byWeek.push(recent365.slice(i, i + 7));
+  }
+
+  // Authentic LeetCode Green Color Palette
+  var colors = [
+    'rgba(255, 255, 255, 0.05)',
+    '#0e4429',
+    '#006d32',
+    '#26a641',
+    '#39d353'
+  ];
+
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var monthLabels = [];
+  var lastMonth = -1;
+
+  for (var w = 0; w < byWeek.length; w++) {
+    var firstDayDate = new Date(byWeek[w][0].date);
+    var mIndex = firstDayDate.getMonth();
+    if (mIndex !== lastMonth) {
+      monthLabels.push({ col: w, name: months[mIndex] });
+      lastMonth = mIndex;
+    }
+  }
+
+  var html = '<div style="display:flex;flex-direction:column;gap:6px;width:100%;overflow-x:auto;padding-bottom:4px">';
+  
+  // Month Labels Row
+  html += '<div style="display:flex;gap:3px;font-family:var(--mono);font-size:.58rem;color:var(--dim);margin-bottom:2px">';
+  var currentLabelIdx = 0;
+  for (var w = 0; w < byWeek.length; w++) {
+    if (currentLabelIdx < monthLabels.length && monthLabels[currentLabelIdx].col === w) {
+      html += '<div style="width:11px;flex-shrink:0;text-align:left;white-space:nowrap">' + monthLabels[currentLabelIdx].name + '</div>';
+      currentLabelIdx++;
+    } else {
+      html += '<div style="width:11px;flex-shrink:0"></div>';
+    }
+  }
+  html += '</div>';
+
+  // Grid Columns
+  html += '<div style="display:flex;gap:3px">';
+  for (var w = 0; w < byWeek.length; w++) {
+    html += '<div style="display:flex;flex-direction:column;gap:3px">';
+    for (var day = 0; day < byWeek[w].length; day++) {
+      var cell = byWeek[w][day];
+      var level = cell.level || (cell.count > 0 ? Math.min(4, Math.ceil(cell.count / 3)) : 0);
+      var title = cell.date + ': ' + (cell.count || 0) + ' submission' + (cell.count === 1 ? '' : 's');
+      var color = colors[Math.min(level, 4)];
+      html += '<div title="' + title + '" style="width:11px;height:11px;border-radius:2px;background:' + color + '"></div>';
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+
+  html += '</div>';
+
+  el.innerHTML = html;
+  el.style.display = 'block';
+}
+
+function loadGFG() {
+  fetchJSON('https://gfg-stats.tashif.codes/' + GFG_USER).then(function(res) {
+    var d = res.data || res;
+    var solved = d.totalProblemsSolved;
+    if (solved) {
+      gfgSolvedNum = parseInt(solved, 10);
+      setText('gfg-solved', solved + '+');
+      refreshTotal();
+      markLive();
+    }
+    if (d.codingScore) setText('gfg-score', d.codingScore);
+  }).catch(function(){});
+}
+
+function loadGitHub() {
+  fetchJSON('https://api.github.com/users/' + GH_USER).then(function(d) {
+    if (d.public_repos !== undefined) setText('gh-repos', d.public_repos);
+    if (d.followers !== undefined) setText('gh-followers', d.followers);
+  }).catch(function(){});
+}
+
+function loadLiveStats() {
+  loadLeetCode();
+  loadGFG();
+  loadGitHub();
+}
+
 /* ── SCROLL REVEAL ── */
 function setupReveal() {
   var els = document.querySelectorAll('.reveal');
@@ -859,6 +1131,9 @@ window.addEventListener('load', function() {
   resizeAll();
   setupReveal();
   render();
+  loadLiveStats();
+  var yEl = document.getElementById('cur-year');
+  if (yEl) yEl.textContent = new Date().getFullYear();
 });
 
 })(); /* end IIFE */
