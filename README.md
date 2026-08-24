@@ -1,5 +1,7 @@
 # Bhavishya Gupta — Developer Portfolio
 
+**Live Deployed Portfolio**: [https://bhavishyaguptaportfolio.vercel.app/](https://bhavishyaguptaportfolio.vercel.app/)
+
 An interactive software engineer portfolio inspired by the interaction model and developer experience of Visual Studio Code. Built with Next.js 14, TypeScript, and Tailwind CSS, this portfolio provides both a comprehensive developer workspace and a dedicated recruiter view for fast candidate evaluation.
 
 ---
@@ -145,6 +147,14 @@ The portfolio integrates with external competitive programming and developer pla
 ├── tailwind.config.js
 └── tsconfig.json
 ```
+
+---
+
+## Live Deployment
+
+The portfolio is deployed and hosted on Vercel:
+
+- **Production URL**: [https://bhavishyaguptaportfolio.vercel.app/](https://bhavishyaguptaportfolio.vercel.app/)
 
 ---
 

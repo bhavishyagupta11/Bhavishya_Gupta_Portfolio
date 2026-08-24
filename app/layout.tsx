@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Bhavishya Gupta', url: 'https://github.com/bhavishyagupta11' }],
   creator: 'Bhavishya Gupta',
-  metadataBase: new URL('https://bhavishyaguptaportfolio.netlify.app'),
+  metadataBase: new URL('https://bhavishyaguptaportfolio.vercel.app'),
   alternates: {
     canonical: '/',
   },
