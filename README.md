@@ -1,133 +1,210 @@
-# BG:// — Bhavishya Gupta | Personal Portfolio
+# Bhavishya Gupta — Developer Portfolio
 
-<div align="center">
-
-![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge&logo=netlify)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-
-### 🌐 Live Demo: [bhavishyaguptaportfolio.netlify.app](https://bhavishyaguptaportfolio.netlify.app/)
-
-</div>
+An interactive software engineer portfolio inspired by the interaction model and developer experience of Visual Studio Code. Built with Next.js 14, TypeScript, and Tailwind CSS, this portfolio provides both a comprehensive developer workspace and a dedicated recruiter view for fast candidate evaluation.
 
 ---
 
-## 📌 Overview
+## Overview
 
-This is my **personal developer portfolio** built with pure HTML, CSS, and JavaScript. It showcases my skills, projects, work experience, competitive programming stats, certifications, and contact information — all in a terminal-inspired dark theme.
+The portfolio offers two primary modes of exploration:
 
----
+- **Developer Workspace**: A full interactive IDE environment featuring a virtual file explorer, multiple editor tabs, code syntax viewers, live coding platform integrations, and an interactive terminal.
+- **Recruiter View**: A focused, high-density summary designed for recruiters and hiring managers to quickly review work experience, featured projects, technical competencies, problem-solving metrics, and resume access within 30 seconds.
 
-## ✨ Features
-
-- ⚡ Terminal / hacker-style UI with a `BG://` theme
-- 📱 Fully responsive design across all screen sizes
-- 🧭 Smooth single-page navigation with anchor links
-- 📊 Live coding stats section (LeetCode, GFG, Code360, Codolio)
-- 🗂️ Sections: About · Experience · Skills · Coding · Projects · Certifications · Contact
-- 🚀 Deployed and hosted on Netlify with zero config
+Visitors entering the root URL can choose their preferred mode via a lightweight entry gateway or toggle between modes at any time using top menu controls or keyboard shortcuts.
 
 ---
 
-## 🗂️ Project Structure
+## Features
 
+- **VS Code Interaction Model**: Left activity bar, collapsible file tree, breadcrumbs, tab management (open, close, switch, reorder), and status bar.
+- **Project Exploration**: Multi-view project inspector supporting source code review, live preview / deployed demo framing, and interactive architecture node diagrams.
+- **Recruiter Mode**: Streamlined executive summary with smooth horizontal slide transition, responsive layout, and direct action triggers.
+- **Interactive Terminal**: Custom terminal drawer with command execution, shell history, file system navigation (`cat`, `ls`, `help`, `clear`), and contact utilities.
+- **Command Palette & Quick Open**: Keyboard-driven navigation via `Ctrl+P` / `Cmd+P` (Quick Open) and `Ctrl+Shift+P` / `Cmd+Shift+P` (Command Palette).
+- **Theme Support**: Integrated theme switcher supporting Dark+ (VS Code Default), Midnight (High Contrast), and Light+ themes.
+- **Responsive Engineering**: Fully adaptive layout across mobile (390px+), tablet, and widescreen desktop monitors.
+
+---
+
+## Coding Profiles
+
+The portfolio integrates with external competitive programming and developer platforms:
+
+- **LeetCode**: Live data integration querying the official LeetCode GraphQL endpoint (`bhavishyagupta001`). Displays real-time solved counts (Easy, Medium, Hard), contest rating (1779), global ranking, and active problem-solving streak.
+- **GitHub**: Profile metadata and repository statistics powered by the official GitHub REST v3 API (`bhavishyagupta11`), accompanied by a 52-week contribution heatmap via public contribution graph endpoints.
+- **GeeksforGeeks**: Verified candidate profile snapshot and roadmap breakdown (`bhavishyarqb`) with direct profile links.
+- **Code360 by Coding Ninjas**: Verified candidate profile snapshot and domain skill badges (`bhavigupta`) with direct profile links.
+- **Codolio**: Unified cross-platform aggregator profile snapshot (`bhavigupta`) linking all competitive programming tracks.
+
+---
+
+## Featured Projects
+
+### 1. FutureMedia — Social Media & Content Platform
+- **Description**: Full-stack social platform with real-time feeds, user authentication, media uploads, interactive engagement, and responsive UI.
+- **Tech Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Cloudinary.
+- **Live Deployed App**: [https://futuremedia-one.vercel.app/](https://futuremedia-one.vercel.app/)
+- **Repository**: [https://github.com/bhavishyagupta11/FutureMedia-A-Social-Media-Platform](https://github.com/bhavishyagupta11/FutureMedia-A-Social-Media-Platform)
+
+### 2. ScholrBoard — Academic Management System
+- **Description**: Centralized platform for managing student analytics, course materials, assignments, and grade tracking.
+- **Tech Stack**: React.js, Node.js, Express.js, MongoDB, JWT Authentication.
+- **Live Deployed App**: [https://scholr-board-360.vercel.app/](https://scholr-board-360.vercel.app/)
+- **Repository**: [https://github.com/bhavishyagupta11/ScholrBoard](https://github.com/bhavishyagupta11/ScholrBoard)
+
+### 3. CogniFlow — Workflow Automation Engine
+- **Description**: Visual workflow automation tool enabling users to define sequential triggers, actions, and conditional pipelines.
+- **Tech Stack**: TypeScript, React Flow, Node.js, Express.js, REST APIs.
+- **Repository**: [https://github.com/bhavishyagupta11/CogniFlow](https://github.com/bhavishyagupta11/CogniFlow)
+
+### 4. TatkalNyaya — Legal AI Assistance Platform
+- **Description**: AI-assisted legal research system utilizing retrieval-augmented generation (RAG) to query legal databases and case precedents.
+- **Tech Stack**: Next.js, Python, FastAPI, LangChain, Vector Embeddings.
+- **Repository**: [https://github.com/bhavishyagupta11/TatkalNyaya](https://github.com/bhavishyagupta11/TatkalNyaya)
+
+---
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 3, PostCSS, Lucide React Icons
+- **State & Logic**: React Context API, Custom Hooks, SessionStorage
+- **Data Fetching**: Next.js Route Handlers, LeetCode GraphQL, GitHub REST v3
+- **Design System**: VS Code IDE Tokenized Themes
+
+---
+
+## Project Structure
+
+```text
+├── app/
+│   ├── api/
+│   │   ├── coding/
+│   │   │   ├── code360/route.ts
+│   │   │   ├── codolio/route.ts
+│   │   │   ├── gfg/route.ts
+│   │   │   └── leetcode/route.ts
+│   │   └── github/
+│   │       └── profile/route.ts
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components/
+│   ├── coding/
+│   │   ├── CodolioWorkspace.tsx
+│   │   ├── GfgCode360Workspace.tsx
+│   │   ├── GitHubWorkspace.tsx
+│   │   └── LeetCodeWorkspace.tsx
+│   ├── command-palette/
+│   ├── common/
+│   │   └── PortfolioEntryModal.tsx
+│   ├── editor/
+│   ├── github/
+│   ├── projects/
+│   ├── recruiter/
+│   │   └── RecruiterView.tsx
+│   ├── resume/
+│   ├── skills/
+│   ├── terminal/
+│   └── workspace/
+│       ├── ActivityBar.tsx
+│       ├── Explorer.tsx
+│       ├── SearchPanel.tsx
+│       ├── StatusBar.tsx
+│       ├── TopMenu.tsx
+│       └── WorkspaceShell.tsx
+├── context/
+│   └── WorkspaceContext.tsx
+├── data/
+│   ├── education.ts
+│   ├── experience.ts
+│   ├── profile.ts
+│   ├── projects.ts
+│   └── skills.ts
+├── hooks/
+│   └── useKeyboardShortcuts.ts
+├── lib/
+│   └── coding/
+│       ├── cache.ts
+│       ├── code360.ts
+│       ├── codolio.ts
+│       ├── gfg.ts
+│       ├── github.ts
+│       └── leetcode.ts
+├── public/
+│   └── assets/
+│       └── Bhavishya_Gupta_Resume.pdf
+├── types/
+│   └── index.ts
+├── next.config.mjs
+├── package.json
+├── tailwind.config.js
+└── tsconfig.json
 ```
-portfolio/
-├── index.html        # Main HTML file (entire site)
-├── style.css         # Stylesheet
-├── script.js         # JavaScript for interactions & animations
-└── assets/           # Images, icons, or other static assets (if any)
-```
 
 ---
 
-## 🛠️ Built With
+## Running Locally
 
-| Technology | Purpose |
-|---|---|
-| **HTML5** | Structure & content |
-| **CSS3** | Styling, animations, responsive layout |
-| **JavaScript** | Interactivity, scroll effects, dynamic elements |
-| **Netlify** | Hosting & continuous deployment |
+### Prerequisites
+- Node.js 18.17.0 or higher
+- npm 9.0.0 or higher
 
----
+### Installation
 
-## 🚀 Getting Started
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/bhavishyagupta11/Bhavishya_Gupta_Portfolio.git
+   cd Bhavishya_Gupta_Portfolio
+   ```
 
-To run this project locally:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### 1. Clone the repository
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Building for Production
+
+To create an optimized production build:
 
 ```bash
-git clone https://github.com/bhavishyagupta11/portfolio.git
-cd portfolio
+npm run build
+npm run start
 ```
 
-### 2. Open in browser
+---
 
-Simply open `index.html` in your browser:
+## Environment Variables
+
+Copy `.env.example` to `.env.local` if you wish to configure optional upstream credentials:
 
 ```bash
-# On Windows
-start index.html
-
-# On macOS
-open index.html
-
-# On Linux
-xdg-open index.html
+cp .env.example .env.local
 ```
 
-> No build tools, no dependencies, no installs needed. It's plain HTML!
+| Variable | Description | Required |
+|---|---|:---:|
+| `GITHUB_TOKEN` | GitHub Personal Access Token for increased API rate limits on server routes. | No |
 
 ---
 
-## 🌐 Deployment
+## Resume
 
-This site is deployed on **Netlify** via drag-and-drop / Git integration.
-
-To deploy your own fork:
-
-1. Push the code to your GitHub repository
-2. Go to [netlify.com](https://www.netlify.com/) and log in
-3. Click **"Add new site" → "Import from Git"**
-4. Select your repository and deploy
-5. Your site will be live at a Netlify URL instantly
-
-🔗 **Live URL:** [https://bhavishyaguptaportfolio.netlify.app/](https://bhavishyaguptaportfolio.netlify.app/)
+The candidate resume is available statically at `/assets/Bhavishya_Gupta_Resume.pdf` and can be downloaded or viewed directly through the in-editor Resume tab or the Recruiter View.
 
 ---
 
-## 📂 Sections
+## License
 
-| Section | Description |
-|---|---|
-| **About** | Who I am, education, and interests |
-| **Experience** | Data Analyst Intern @ Samatrix Consulting |
-| **Skills** | Tech arsenal across languages, frontend, backend, AI/ML, databases |
-| **Coding** | Competitive programming profiles & LeetCode stats |
-| **Projects** | CodeVengers & FutureMedia |
-| **Certs** | AI/ML & DSA certifications + achievements |
-| **Contact** | Email, GitHub, LinkedIn, LeetCode, Codolio |
-
----
-
-## 📬 Contact
-
-- 📧 Email: [bhavishyagupta001@gmail.com](mailto:bhavishyagupta001@gmail.com)
-- 💻 GitHub: [@bhavishyagupta11](https://github.com/bhavishyagupta11)
-- 🔗 LinkedIn: [Bhavishya Gupta](https://www.linkedin.com/in/bhavishya-gupta-5103a4211/)
-- ⚡ LeetCode: [@bhavishyagupta001](https://leetcode.com/u/bhavishyagupta001/)
-- 🔗 Codolio: [@bhavigupta](https://codolio.com/profile/bhavigupta)
-
----
-
-<div align="center">
-
-*Designed & Built by Bhavishya Gupta · 2026 · BG://*
-
-⭐ If you like this portfolio, consider giving the repo a star!
-
-</div>
+This project is open source and available under the [MIT License](LICENSE).
