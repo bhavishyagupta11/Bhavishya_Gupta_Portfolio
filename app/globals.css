@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default Dark+ */
+  --ide-bg: #1e1e1e;
+  --ide-sidebar: #252526;
+  --ide-activity: #333333;
+  --ide-editor: #1e1e1e;
+  --ide-tabs: #2d2d2d;
+  --ide-tab-active: #1e1e1e;
+  --ide-tab-inactive: #2d2d2d;
+  --ide-border: #3e3e42;
+  --ide-accent: #007acc;
+  --ide-accent-hover: #0098ff;
+  --ide-text: #cccccc;
+  --ide-text-muted: #858585;
+  --ide-statusbar: #007acc;
+  --ide-terminal: #181818;
+  --ide-hover: rgba(255, 255, 255, 0.06);
+  --ide-selection: #264f78;
+  --ide-gutter: #1e1e1e;
+
+  /* Code Syntax Tokens */
+  --syn-keyword: #569cd6;
+  --syn-string: #ce9178;
+  --syn-number: #b5cea8;
+  --syn-function: #dcdcaa;
+  --syn-comment: #6a9955;
+  --syn-type: #4ec9b0;
+  --syn-variable: #9cdcfe;
+  --syn-tag: #569cd6;
+  --syn-attr: #9cdcfe;
+  --syn-operator: #d4d4d4;
+  --syn-property: #9cdcfe;
+
+  --font-mono: 'Consolas', 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+[data-theme='midnight'] {
+  --ide-bg: #0a0e17;
+  --ide-sidebar: #0f1422;
+  --ide-activity: #070a10;
+  --ide-editor: #0a0e17;
+  --ide-tabs: #131a2c;
+  --ide-tab-active: #0a0e17;
+  --ide-tab-inactive: #131a2c;
+  --ide-border: #1b253b;
+  --ide-accent: #00d4ff;
+  --ide-accent-hover: #38e1ff;
+  --ide-text: #e2e8f0;
+  --ide-text-muted: #718096;
+  --ide-statusbar: #093354;
+  --ide-terminal: #060910;
+  --ide-hover: rgba(0, 212, 255, 0.08);
+  --ide-selection: rgba(0, 212, 255, 0.25);
+  --ide-gutter: #0a0e17;
+
+  --syn-keyword: #00d4ff;
+  --syn-string: #48bb78;
+  --syn-number: #f6ad55;
+  --syn-function: #63b3ed;
+  --syn-comment: #718096;
+  --syn-type: #9f7aea;
+  --syn-variable: #e2e8f0;
+  --syn-tag: #00d4ff;
+  --syn-attr: #63b3ed;
+  --syn-operator: #a0aec0;
+  --syn-property: #63b3ed;
+}
+
+[data-theme='light-plus'] {
+  --ide-bg: #ffffff;
+  --ide-sidebar: #f3f3f3;
+  --ide-activity: #2c2c2c;
+  --ide-editor: #ffffff;
+  --ide-tabs: #ececec;
+  --ide-tab-active: #ffffff;
+  --ide-tab-inactive: #ececec;
+  --ide-border: #e0e0e0;
+  --ide-accent: #0066b8;
+  --ide-accent-hover: #0078d4;
+  --ide-text: #333333;
+  --ide-text-muted: #6e6e6e;
+  --ide-statusbar: #007acc;
+  --ide-terminal: #f8f8f8;
+  --ide-hover: rgba(0, 0, 0, 0.05);
+  --ide-selection: #add6ff;
+  --ide-gutter: #ffffff;
+
+  --syn-keyword: #0000ff;
+  --syn-string: #a31515;
+  --syn-number: #098658;
+  --syn-function: #795e26;
+  --syn-comment: #008000;
+  --syn-type: #267f99;
+  --syn-variable: #001080;
+  --syn-tag: #800000;
+  --syn-attr: #e50000;
+  --syn-operator: #000000;
+  --syn-property: #001080;
+}
+
+/* Custom scrollbars matching IDE */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(121, 121, 121, 0.4);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.7);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--ide-selection);
+}
+
+body {
+  background-color: var(--ide-bg);
+  color: var(--ide-text);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Code container text selection allowed */
+.allow-select {
+  user-select: text;
+}
