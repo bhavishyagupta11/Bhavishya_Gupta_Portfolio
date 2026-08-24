@@ -4,7 +4,7 @@ import { WorkspaceProvider } from '@/context/WorkspaceContext';
 
 export const metadata: Metadata = {
   title: 'Bhavishya Gupta | Software Engineer',
-  description: 'Interactive developer workspace portfolio of Bhavishya Gupta — Software Engineer, Full Stack Developer, and AI/ML enthusiast. 800+ DSA problems solved, SDE internship experience, and full-stack systems engineering.',
+  description: 'Interactive developer workspace portfolio of Bhavishya Gupta — Software Engineer, Full Stack Developer, and AI/ML enthusiast. 810+ DSA problems solved, SDE internship experience, and full-stack systems engineering.',
   keywords: [
     'Bhavishya Gupta',
     'Software Engineer',

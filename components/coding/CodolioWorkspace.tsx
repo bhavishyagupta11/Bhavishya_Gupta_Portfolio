@@ -140,7 +140,7 @@ export const CodolioWorkspace: React.FC = () => {
           <div className="bg-[var(--ide-bg)] p-4 rounded-lg border border-[var(--ide-border)]">
             <div className="text-2xs text-[var(--ide-text-muted)] uppercase font-mono">Combined Solves</div>
             <div className="text-2xl sm:text-3xl font-bold font-mono text-white mt-1">
-              800+
+              810+
             </div>
             <div className="text-[11px] text-[var(--ide-text-muted)] mt-0.5">Across All Platforms</div>
           </div>
@@ -148,7 +148,7 @@ export const CodolioWorkspace: React.FC = () => {
           <div className="bg-[var(--ide-bg)] p-4 rounded-lg border border-[var(--ide-border)]">
             <div className="text-2xs text-[var(--ide-text-muted)] uppercase font-mono">Active Days</div>
             <div className="text-2xl sm:text-3xl font-bold font-mono text-cyan-400 mt-1">
-              320+
+              328+
             </div>
             <div className="text-[11px] text-[var(--ide-text-muted)] mt-0.5">Consistency Metric</div>
           </div>
@@ -177,7 +177,7 @@ export const CodolioWorkspace: React.FC = () => {
               <BarChart2 className="w-4 h-4 text-cyan-400" />
               <span>Unified Cross-Platform Solves Breakdown</span>
             </div>
-            <span className="text-2xs text-[var(--ide-text-muted)] font-mono">800+ Total Problems</span>
+            <span className="text-2xs text-[var(--ide-text-muted)] font-mono">810+ Total Problems</span>
           </div>
 
           <div className="space-y-3 font-mono text-xs">

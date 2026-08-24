@@ -115,7 +115,7 @@ export const CommandPalette: React.FC = () => {
     },
     {
       id: 'open-codolio',
-      title: 'Analytics: Codolio Cross-Platform Aggregator (800+ Solves)',
+      title: 'Analytics: Codolio Cross-Platform Aggregator (810+ Solves)',
       category: 'Coding',
       icon: <Compass className="w-4 h-4 text-cyan-400" />,
       action: () => openFile('codolio-md')

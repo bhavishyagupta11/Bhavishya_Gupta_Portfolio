@@ -106,13 +106,13 @@ export const MarkdownViewer: React.FC<MarkdownViewerProps> = ({ fileId }) => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
           <div className="bg-[var(--ide-sidebar)] p-3 rounded-lg border border-[var(--ide-border)]">
             <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">Problems Solved</div>
-            <div className="text-xl font-bold font-mono text-amber-400 mt-0.5">800+</div>
+            <div className="text-xl font-bold font-mono text-amber-400 mt-0.5">810+</div>
             <div className="text-2xs text-[var(--ide-text-muted)]">Across Platforms</div>
           </div>
           <div className="bg-[var(--ide-sidebar)] p-3 rounded-lg border border-[var(--ide-border)]">
             <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">LeetCode Rating</div>
             <div className="text-xl font-bold font-mono text-emerald-400 mt-0.5">1779</div>
-            <div className="text-2xs text-emerald-400 font-semibold">Top 13% Global</div>
+            <div className="text-2xs text-emerald-400 font-semibold">Top 9.2% Global</div>
           </div>
           <div className="bg-[var(--ide-sidebar)] p-3 rounded-lg border border-[var(--ide-border)]">
             <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">B.Tech CGPA</div>
@@ -212,7 +212,7 @@ export const MarkdownViewer: React.FC<MarkdownViewerProps> = ({ fileId }) => {
             My engineering work is centered around building high-throughput full-stack platforms, asynchronous task architectures, real-time messaging, and retrieval-augmented generation (RAG) systems. During my internship as a <strong className="text-white font-semibold">Software Development Intern at Ghai Technologies</strong> (Feb–Jul 2026), I developed 15+ responsive web pages, integrated 8+ RESTful APIs, and resolved 40+ bugs across production SDLC workflows.
           </p>
           <p>
-            On the algorithmic side, I have solved <strong className="text-amber-400 font-semibold font-mono">800+ DSA problems</strong> across LeetCode, GeeksForGeeks, and Code360, maintaining a <strong className="text-white font-semibold">LeetCode Contest Rating of 1779</strong> (Top 13% globally) and a 260+ day active problem-solving streak.
+            On the algorithmic side, I have solved <strong className="text-amber-400 font-semibold font-mono">810+ DSA problems</strong> across LeetCode, GeeksForGeeks, and Code360, maintaining a <strong className="text-white font-semibold">LeetCode Contest Rating of 1779</strong> (Top 9.2% globally) and a 328-day active problem-solving streak.
           </p>
         </div>
 

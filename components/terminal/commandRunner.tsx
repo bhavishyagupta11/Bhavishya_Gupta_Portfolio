@@ -38,7 +38,7 @@ export function executeCommand(
             <div><span className="text-white font-semibold">skills</span> — Display technical skill arsenal</div>
             <div><span className="text-white font-semibold">experience</span> — View SDE internship experience</div>
             <div><span className="text-white font-semibold">education</span> — View B.Tech (CGPA: 9.30) details</div>
-            <div><span className="text-white font-semibold">coding</span> — View 800+ cross-platform DSA summary</div>
+            <div><span className="text-white font-semibold">coding</span> — View 810+ cross-platform DSA summary</div>
             <div><span className="text-white font-semibold">leetcode</span> — Open live LeetCode analytics</div>
             <div><span className="text-white font-semibold">gfg</span> / <span className="text-white font-semibold">code360</span> — Open GFG & Code360 workspace</div>
             <div><span className="text-white font-semibold">github</span> — Open GitHub live analytics workspace</div>
@@ -61,7 +61,7 @@ export function executeCommand(
           <div className="text-emerald-400 font-bold">{profileData.name}</div>
           <div className="text-[var(--ide-accent)]">Software Engineer • Full Stack Developer • AI/ML Enthusiast</div>
           <div className="text-[var(--ide-text-muted)]">B.Tech CSE (AI & ML) @ JECRC University (CGPA: 9.30, 2023–2027)</div>
-          <div className="text-amber-400">800+ DSA Solved (LeetCode Contest Rating: 1779) • SDE Intern @ Ghai Tech</div>
+          <div className="text-amber-400">810+ DSA Solved (LeetCode Contest Rating: 1779) • SDE Intern @ Ghai Tech</div>
           <div className="text-emerald-400">🟢 Status: {profileData.availability}</div>
         </div>
       );
@@ -167,7 +167,7 @@ export function executeCommand(
     case 'coding':
       return (
         <div className="space-y-1.5 text-xs font-mono">
-          <div className="text-amber-400 font-bold">// 800+ Verified DSA Problems Solved:</div>
+          <div className="text-amber-400 font-bold">// 810+ Verified DSA Problems Solved:</div>
           {codingProfiles.map(p => (
             <div key={p.platform} className="text-2xs">
               <span className="text-white font-semibold">{p.platform} ({p.handle}): </span>
@@ -266,7 +266,7 @@ export function executeCommand(
         return (
           <div className="space-y-1 text-xs font-mono p-2.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
             <div className="font-bold text-white">Running Candidate Diagnostic Assessment...</div>
-            <div>[✓] Problem Solving & Algorithms (800+ solved, 1779 contest rating) : PASS</div>
+            <div>[✓] Problem Solving & Algorithms (810+ solved, 1779 contest rating) : PASS</div>
             <div>[✓] Full-Stack Systems Development (MERN, Next.js, APIs) : PASS</div>
             <div>[✓] AI/ML & RAG Architecture (CogniFlow, Intellex AI) : PASS</div>
             <div>[✓] Production Internship Experience (Ghai Technologies) : PASS</div>
