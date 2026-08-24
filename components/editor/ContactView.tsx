@@ -72,14 +72,10 @@ export async function sendMessage(inquiry: { name: string; email: string; messag
       ) : (
         <div className="flex-1 overflow-y-auto p-4 md:p-8 max-w-3xl mx-auto w-full flex flex-col justify-center">
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Available for Opportunities</span>
-            </div>
             <h1 className="text-2xl md:text-3xl font-bold text-[var(--ide-text)]">
               Let&apos;s Build Together
             </h1>
-            <p className="text-xs md:text-sm text-[var(--ide-text-muted)] mt-1 max-w-md mx-auto">
+            <p className="text-xs md:text-sm text-[var(--ide-text-muted)] mt-1.5 max-w-md mx-auto">
               Open for full-time Software Engineer positions, SDE internships, and engineering discussions.
             </p>
           </div>

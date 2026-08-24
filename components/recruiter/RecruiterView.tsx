@@ -79,27 +79,28 @@ export const RecruiterView: React.FC = () => {
       <main className="max-w-6xl mx-auto px-4 sm:px-8 py-8 md:py-12 space-y-12 pb-32">
         {/* 1. Hero & Executive Summary */}
         <section className="space-y-4 border-b border-[var(--ide-border)] pb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Available for SDE / Full-Stack Roles (2027 Grad / Internships)</span>
-          </div>
+          <div className="space-y-2">
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[var(--ide-text)]">
+              Bhavishya Gupta
+            </h1>
 
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-[var(--ide-text)]">
-            Bhavishya Gupta
-          </h1>
-
-          <div className="flex flex-wrap items-center gap-2 text-sm md:text-base text-[var(--ide-accent)] font-mono font-medium">
-            <span>Software Engineer</span>
-            <span className="text-[var(--ide-text-muted)]">•</span>
-            <span>Full Stack Developer</span>
-            <span className="text-[var(--ide-text-muted)]">•</span>
-            <span>B.Tech CSE (AI & ML)</span>
-            <span className="text-[var(--ide-text-muted)]">•</span>
-            <span>SDE Intern @ Ghai Technologies</span>
+            <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm md:text-base text-[var(--ide-accent)] font-mono font-medium">
+              <span>Software Engineer</span>
+              <span className="text-[var(--ide-text-muted)]">•</span>
+              <span>Full Stack Developer</span>
+              <span className="text-[var(--ide-text-muted)]">•</span>
+              <span>B.Tech CSE (AI & ML)</span>
+              <span className="text-[var(--ide-text-muted)]">•</span>
+              <span>SDE Intern @ Ghai Technologies</span>
+            </div>
           </div>
 
           <p className="text-sm md:text-base text-[var(--ide-text-muted)] leading-relaxed max-w-3xl font-light">
             {profileData.summary}
+          </p>
+
+          <p className="text-xs md:text-sm text-[var(--ide-text-muted)] font-mono">
+            Open to software engineering internships and 2027 graduate full-stack opportunities.
           </p>
 
           {/* Quick Action CTAs */}
