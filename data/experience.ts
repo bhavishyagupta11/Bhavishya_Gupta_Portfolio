@@ -9,9 +9,9 @@ export const experienceData: ExperienceItem[] = [
     type: "Internship",
     summary: "Worked on client-facing web applications in an Agile team, delivering high-performance UI components, integrating RESTful authentication and payment APIs, and resolving critical application defects across the development lifecycle.",
     contributions: [
-      "Developed 15+ responsive web pages and reusable UI components using React.js and modern CSS, enhancing mobile usability and accessibility.",
-      "Integrated 8+ RESTful APIs for Google/Facebook OAuth authentication, membership management, and secure payment processing.",
-      "Diagnosed and resolved 40+ UI and functional bugs, improving application reliability, test coverage, and code maintainability.",
+      "Developed 15+ responsive web pages and reusable React UI components, reducing repetitive UI implementation effort by 25% through component reuse and improving cross-device usability.",
+      "Integrated 8+ RESTful APIs for Google/Facebook authentication, memberships, and payment workflows, reducing repetitive API integration effort by 20% through reusable request/response handling within an Agile environment.",
+      "Resolved 40+ UI and functional bugs, reducing recurring UI issues by 30% through systematic debugging, cross-device testing, validation, and Git-based SDLC workflows.",
       "Collaborated in daily Agile standups, sprint reviews, and Git-based code reviews following standard SDLC practices."
     ],
     technologies: [

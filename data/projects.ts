@@ -11,11 +11,10 @@ export const projectsData: ProjectData[] = [
     problem: "Real-time social feeds suffer performance degradation when heavy tasks (image processing, notifications, feed fan-out) are handled synchronously in request-response cycles.",
     solution: "A full-stack social media application featuring ~35–45 REST API endpoints, Docker containerization across services, Redis-backed BullMQ for asynchronous background job execution, and real-time interaction via Socket.io.",
     myContribution: [
-      "Architected MERN stack core with modular controllers, routes, and data models for users, posts, comments, likes, and followers.",
-      "Implemented real-time bidirectional event handling using Socket.io for instant notifications and chat events.",
-      "Integrated Redis and BullMQ to offload notification fan-outs and email dispatches to async background workers.",
-      "Configured multi-container Docker setup for local service isolation (web, api, database, redis).",
-      "Configured CI/CD via GitHub Actions for automated linting and testing pipelines."
+      "Architected a social platform (React, Node.js, Express, MongoDB, Socket.IO) with 40+ APIs and 6 MongoDB collections.",
+      "Reduced error-handling boilerplate by 98.3% across 60 Express endpoints using asyncHandler and 6+ security layers with JWT, RBAC, rate limiting, and validation.",
+      "Built a recommendation microservice using TF-IDF, NetworkX, time-decay, and containerized 5 services with Docker Compose.",
+      "Integrated Cloudinary for media asset hosting, enabled instant messaging via Socket.IO, and configured CI/CD via GitHub Actions."
     ],
     usedInProject: [
       "React.js", "Node.js", "Express.js", "MongoDB", "Redis", "BullMQ", "Socket.io", "Docker", "JWT", "Cloudinary", "GitHub Actions"
@@ -138,11 +137,10 @@ export const notificationWorker = new Worker('social-notifications', async (job:
     problem: "Academic institutions suffer from fragmented achievement records, manual certificate verification bottlenecks, and disconnected communication between students, faculty advisors, and placement coordinators.",
     solution: "A unified full-stack MERN platform engineered with 4 hierarchical roles (Student, Advisor, Dept Coordinator, Admin), role-based access control, personalized analytics dashboards, and a 6-pipeline approval workflow for automated achievement lifecycle management.",
     myContribution: [
-      "Architected the full-stack MERN foundation including MongoDB schema design, JWT authentication, and Express REST API routing.",
-      "Designed and implemented 4 distinct role-based dashboard experiences (Student, Faculty Advisor, Department Coordinator, and Institutional Admin).",
-      "Engineered the multi-step verification pipeline (Upload -> Advisor Review -> Coordinator Endorsement -> Admin Approval).",
-      "Integrated Cloudinary for secure certificate attachment uploads and Nodemailer for event-driven notification emails.",
-      "Built interactive student analytics visualizing verified vs pending submissions and placement readiness tracking."
+      "Engineered a full-stack platform with 35+ React screens, 115+ REST APIs, 20+ MongoDB models, 4 role-based dashboards, and automated workflows.",
+      "Optimized queries across 10,000+ benchmarked profiles using compound indexing and Profile-first aggregation, cutting latency by 98.2% (2.34s → 42ms).",
+      "Automated academic workflows and developer scoring with GitHub, LeetCode, and Codeforces, reducing manual evaluation effort for academic workflows by 71.4% and for developer scoring by 87.5%.",
+      "Integrated Cloudinary for secure attachment storage and Nodemailer for automated approval pipeline notification emails."
     ],
     usedInProject: [
       "React.js", "Node.js", "Express.js", "MongoDB Atlas", "Mongoose", "JWT", "Cloudinary", "Nodemailer", "Tailwind CSS"
