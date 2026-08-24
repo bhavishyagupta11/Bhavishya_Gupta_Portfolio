@@ -77,11 +77,10 @@ export const StatusBar: React.FC = () => {
           <span>Terminal</span>
         </button>
 
-        {/* Live Status indicator */}
-        <div className="hidden md:flex items-center gap-1.5 text-emerald-200">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Available for SDE Roles</span>
-        </div>
+        {/* Status indicator */}
+        <span className="hidden lg:inline text-white/80 hover:bg-black/20 px-1 py-0.5 rounded cursor-default font-mono text-2xs">
+          SDE &amp; 2027 Grad Roles
+        </span>
       </div>
 
       {/* Right side items */}
