@@ -14,23 +14,23 @@ export const educationData: EducationItem[] = [
     ]
   },
   {
-    institution: "SHPS Senior Secondary School",
+    institution: "SKSS Sec. School",
     location: "Jaipur, Rajasthan",
-    degree: "Senior Secondary (Class XII - Science)",
+    degree: "Senior Secondary School (Class XII)",
     period: "2022",
-    grade: "Percentage: 77.2%",
+    grade: "Percentage: 77.20%",
     highlights: [
       "Core curriculum in Physics, Chemistry, Mathematics, and Computer Science."
     ]
   },
   {
-    institution: "IMP Secondary School",
+    institution: "LPS",
     location: "Jaipur, Rajasthan",
     degree: "Secondary School (Class X)",
     period: "2020",
-    grade: "Percentage: 95.8%",
+    grade: "Percentage: 95.67%",
     highlights: [
-      "Distinction across all foundational subjects with 95.8% aggregate score."
+      "Distinction across all foundational subjects with 95.67% aggregate score."
     ]
   }
 ];

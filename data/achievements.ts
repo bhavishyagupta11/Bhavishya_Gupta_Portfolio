@@ -40,10 +40,28 @@ export const achievementsData: AchievementItem[] = [
     id: "servicenow-csa-cad",
     category: "Certification",
     title: "ServiceNow CSA & CAD Certified",
-    issuerOrEvent: "ServiceNow",
-    dateOrYear: "2025",
+    issuerOrEvent: "ServiceNow, Jaipur (Virtual)",
+    dateOrYear: "Jun 2026",
     description: "Certified System Administrator (CSA) and Certified Application Developer (CAD) credentials validating enterprise application architecture.",
-    badge: "📜 Certified"
+    badge: "📜 Certified (Jun 2026)"
+  },
+  {
+    id: "mckinsey-forward",
+    category: "Certification",
+    title: "McKinsey Forward Program (Certified)",
+    issuerOrEvent: "McKinsey & Company",
+    dateOrYear: "Jun 2026",
+    description: "Selected and graduated from the competitive McKinsey Forward program focusing on structured problem-solving, digital agility, and leadership.",
+    badge: "💼 Certified (Jun 2026)"
+  },
+  {
+    id: "samatrix-ai",
+    category: "Certification",
+    title: "Foundation of AI & Data Science Suite",
+    issuerOrEvent: "Samatrix.io, Jaipur",
+    dateOrYear: "2023 - 2026",
+    description: "Completed comprehensive certifications covering Probability Modeling & Statistics, Deep Learning, and Neural Networks.",
+    badge: "🧠 AI Certified"
   },
   {
     id: "gcp-foundation",
@@ -64,15 +82,6 @@ export const achievementsData: AchievementItem[] = [
     badge: "🎖️ Elite (99/100)"
   },
   {
-    id: "samatrix-ai",
-    category: "Certification",
-    title: "AI & Data Science Professional Suite",
-    issuerOrEvent: "Samatrix Consulting",
-    dateOrYear: "2024",
-    description: "Completed certifications covering Probability & Statistics, Deep Learning, and Neural Networks.",
-    badge: "🧠 AI Certified"
-  },
-  {
     id: "mygov-ambassador",
     category: "Leadership",
     title: "MyGov India Campus Ambassador",
@@ -89,15 +98,6 @@ export const achievementsData: AchievementItem[] = [
     dateOrYear: "2024",
     description: "Mobilized 100+ student delegations to participate in annual technical festival events and project showcases.",
     badge: "🤝 100+ Delegates"
-  },
-  {
-    id: "mckinsey-forward",
-    category: "Leadership",
-    title: "McKinsey & Company Forward Program Graduate",
-    issuerOrEvent: "McKinsey & Company",
-    dateOrYear: "2024",
-    description: "Selected and graduated from the competitive Forward program focusing on structured problem-solving and professional communication.",
-    badge: "💼 Graduate"
   }
 ];
 

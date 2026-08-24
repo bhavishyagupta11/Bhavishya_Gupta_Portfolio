@@ -11,7 +11,7 @@ export const profileData = {
   tagline: "Building scalable web platforms, distributed backends, and AI/ML retrieval systems with production-grade engineering standards.",
   summary: "Computer Science undergraduate specializing in Artificial Intelligence & Machine Learning at JECRC University (GPA 9.30, 2023–2027). Experienced in building production web applications, asynchronous task queues, multi-agent RAG pipelines, and RESTful microservices. 810+ DSA problems solved across LeetCode, GeeksForGeeks, and Code360. SDE Intern at Ghai Technologies.",
   email: "bhavishyagupta001@gmail.com",
-  phone: "+91 7999749094",
+  phone: "+91-7339743084",
   location: "Jaipur, Rajasthan, India",
   availability: "Available for Software Engineer / Full Stack Roles (2027 Grad / Internships)",
   github: "https://github.com/bhavishyagupta11",

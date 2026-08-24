@@ -206,6 +206,7 @@ export function executeCommand(
         <div className="space-y-1 text-xs font-mono">
           <div className="text-[var(--ide-accent)] font-bold">// Contact Channels:</div>
           <div>Email: <a href={`mailto:${profileData.email}`} className="text-emerald-400 underline">{profileData.email}</a></div>
+          <div>Phone: <a href={`tel:${profileData.phone}`} className="text-amber-400 underline">{profileData.phone}</a></div>
           <div>LinkedIn: <a href={profileData.linkedin} target="_blank" rel="noopener noreferrer" className="text-sky-400 underline">{profileData.linkedin}</a></div>
           <div>GitHub: <a href={profileData.github} target="_blank" rel="noopener noreferrer" className="text-white underline">{profileData.github}</a></div>
           <div>Location: {profileData.location}</div>

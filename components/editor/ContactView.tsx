@@ -14,6 +14,7 @@ export const contact = {
   name: "${profileData.name}",
   role: "Software Engineer",
   email: "${profileData.email}",
+  phone: "${profileData.phone}",
   github: "${profileData.github}",
   linkedin: "${profileData.linkedin}",
   leetcode: "${profileData.leetcode}",
