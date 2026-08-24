@@ -90,8 +90,8 @@ export const codingProfiles: CodingProfile[] = [
     handle: "bhavigupta",
     url: "https://codolio.com/profile/bhavigupta",
     stats: [
-      { label: "Combined Solves", value: "800+" },
-      { label: "Active Days", value: "320+" }
+      { label: "Combined Solves", value: "810+" },
+      { label: "Active Days", value: "328+" }
     ]
   }
 ];

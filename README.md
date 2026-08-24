@@ -29,13 +29,13 @@ Visitors entering the root URL can choose their preferred mode via a lightweight
 
 ## Coding Profiles
 
-The portfolio integrates with external competitive programming and developer platforms:
+The portfolio integrates with external competitive programming and developer platforms (810+ DSA problems solved across platforms):
 
-- **LeetCode**: Live data integration querying the official LeetCode GraphQL endpoint (`bhavishyagupta001`). Displays real-time solved counts (Easy, Medium, Hard), contest rating (1779), global ranking, and active problem-solving streak.
-- **GitHub**: Profile metadata and repository statistics powered by the official GitHub REST v3 API (`bhavishyagupta11`), accompanied by a 52-week contribution heatmap via public contribution graph endpoints.
-- **GeeksforGeeks**: Verified candidate profile snapshot and roadmap breakdown (`bhavishyarqb`) with direct profile links.
-- **Code360 by Coding Ninjas**: Verified candidate profile snapshot and domain skill badges (`bhavigupta`) with direct profile links.
-- **Codolio**: Unified cross-platform aggregator profile snapshot (`bhavigupta`) linking all competitive programming tracks.
+- **LeetCode**: Live data integration querying the official LeetCode GraphQL endpoint (`bhavishyagupta001`). Displays real-time solved counts (629 Solved: 195 Easy, 322 Medium, 112 Hard), contest rating (1779, Top 9.2% Global), global ranking, and 328-day active problem-solving streak.
+- **GitHub**: Profile metadata and repository statistics powered by the official GitHub REST v3 API (`bhavishyagupta11`), accompanied by a 52-week contribution heatmap (720 contributions in the past year) via public contribution graph endpoints.
+- **GeeksforGeeks**: Verified candidate profile snapshot (120+ Solved) and roadmap breakdown (`bhavishyarqb`) with direct profile links.
+- **Code360 by Coding Ninjas**: Verified candidate profile snapshot (70+ Solved) and domain skill badges (`bhavigupta`) with direct profile links.
+- **Codolio**: Unified cross-platform aggregator profile snapshot (810+ Aggregated Solves) (`bhavigupta`) linking all competitive programming tracks.
 
 ---
 

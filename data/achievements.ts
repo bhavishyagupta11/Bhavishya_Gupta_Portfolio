@@ -28,13 +28,13 @@ export const achievementsData: AchievementItem[] = [
     badge: "🏅 Top 10 of 500+"
   },
   {
-    id: "dsa-800",
+    id: "dsa-810",
     category: "Milestone",
-    title: "800+ Verified DSA Problems Solved",
+    title: "810+ Verified DSA Problems Solved",
     issuerOrEvent: "LeetCode, GeeksForGeeks, Code360",
     dateOrYear: "2024 - 2026",
-    description: "Demonstrated sustained problem-solving discipline with 600+ solved on LeetCode (1779 contest rating, 260+ day streak), 120+ on GFG, and 70+ on Code360.",
-    badge: "⚡ 800+ Solved"
+    description: "Demonstrated sustained problem-solving discipline with 629 solved on LeetCode (1779 contest rating, 328-day streak), 120+ on GFG, and 70+ on Code360.",
+    badge: "⚡ 810+ Solved"
   },
   {
     id: "servicenow-csa-cad",

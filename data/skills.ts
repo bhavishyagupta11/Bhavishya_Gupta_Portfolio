@@ -60,7 +60,7 @@ export const skillsData: SkillCategory[] = [
     name: "Core CS & Developer Tools",
     icon: "Cpu",
     skills: [
-      { name: "Data Structures & Algorithms", levelDescription: "800+ solved problems across Binary Search, Trees, Graphs, Dynamic Programming, Greedy", projects: ["LeetCode (1779 Rating)", "GFG", "Code360"], categoryTag: "core" },
+      { name: "Data Structures & Algorithms", levelDescription: "810+ solved problems across Binary Search, Trees, Graphs, Dynamic Programming, Greedy", projects: ["LeetCode (1779 Rating)", "GFG", "Code360"], categoryTag: "core" },
       { name: "Git & GitHub", levelDescription: "Branching strategies, pull requests, merge conflict resolution, and version control", projects: ["All Projects", "Ghai Technologies SDLC"], categoryTag: "tool" },
       { name: "Docker", levelDescription: "Containerizing services via Dockerfile and multi-service orchestration with Docker Compose", projects: ["FutureMedia", "Intellex AI"], categoryTag: "tool" },
       { name: "Operating Systems & DBMS", levelDescription: "Process synchronization, memory management, file systems, concurrency, and SQL transactions", projects: ["B.Tech Core Curriculum"], categoryTag: "concept" },

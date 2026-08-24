@@ -9,7 +9,7 @@ export const profileData = {
     "Competitive Programmer"
   ],
   tagline: "Building scalable web platforms, distributed backends, and AI/ML retrieval systems with production-grade engineering standards.",
-  summary: "Computer Science undergraduate specializing in Artificial Intelligence & Machine Learning at JECRC University (GPA 9.30, 2023–2027). Experienced in building production web applications, asynchronous task queues, multi-agent RAG pipelines, and RESTful microservices. 800+ DSA problems solved across LeetCode, GeeksForGeeks, and Code360. SDE Intern at Ghai Technologies.",
+  summary: "Computer Science undergraduate specializing in Artificial Intelligence & Machine Learning at JECRC University (GPA 9.30, 2023–2027). Experienced in building production web applications, asynchronous task queues, multi-agent RAG pipelines, and RESTful microservices. 810+ DSA problems solved across LeetCode, GeeksForGeeks, and Code360. SDE Intern at Ghai Technologies.",
   email: "bhavishyagupta001@gmail.com",
   phone: "+91 7999749094",
   location: "Jaipur, Rajasthan, India",
@@ -21,8 +21,8 @@ export const profileData = {
   code360: "https://www.naukri.com/code360/profile/bhavigupta",
   codolio: "https://codolio.com/profile/bhavigupta",
   stats: [
-    { label: "DSA Solved", value: "800+", detail: "Across CP Platforms" },
-    { label: "LeetCode Contest Rating", value: "1779", detail: "Top 13% Global" },
+    { label: "DSA Solved", value: "810+", detail: "Across CP Platforms" },
+    { label: "LeetCode Contest Rating", value: "1779", detail: "Top 9.2% Global" },
     { label: "B.Tech GPA", value: "9.30", detail: "JECRC University (AI & ML)" },
     { label: "Work Experience", value: "SDE Intern", detail: "Ghai Technologies" }
   ]
