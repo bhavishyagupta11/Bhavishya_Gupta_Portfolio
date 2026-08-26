@@ -119,12 +119,12 @@ export const PortfolioEntryModal: React.FC = () => {
           {/* OPTION 1 — RECRUITER VIEW */}
           <div 
             onClick={() => handleSelect('recruiter')}
-            className="group relative p-5 rounded-lg bg-[var(--ide-bg)] border-2 border-emerald-500/50 hover:border-emerald-400 hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between"
+            className="group relative p-5 rounded bg-[var(--ide-bg)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] transition-colors cursor-pointer flex flex-col justify-between"
           >
             <div>
               {/* Unobtrusive Label */}
               <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-[10px] font-mono font-semibold text-emerald-400">
+                <span className="text-[10px] font-mono text-[var(--ide-accent)] font-medium">
                   Recommended for recruiters
                 </span>
                 <span className="text-[10px] font-mono text-[var(--ide-text-muted)]">30s Scan</span>
@@ -132,17 +132,17 @@ export const PortfolioEntryModal: React.FC = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                  <div className="w-7 h-7 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-center justify-center text-[var(--ide-accent)] shrink-0">
                     <UserCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-[var(--ide-text)] group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-sm font-bold text-white group-hover:text-[var(--ide-accent)] transition-colors">
                       Recruiter View
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-2xs text-emerald-400 font-mono">
+                <p className="text-2xs text-[var(--ide-accent)] font-mono">
                   Get the essentials in under 30 seconds.
                 </p>
 
@@ -153,27 +153,27 @@ export const PortfolioEntryModal: React.FC = () => {
                 {/* Highlights */}
                 <ul className="space-y-1.5 pt-3 text-2xs text-[var(--ide-text-muted)] font-mono">
                   <li className="flex items-center gap-1.5 text-[var(--ide-text)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--ide-accent)] shrink-0" />
                     <span>SDE Internship</span>
                   </li>
                   <li className="flex items-center gap-1.5 text-[var(--ide-text)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--ide-accent)] shrink-0" />
                     <span>Full-stack projects</span>
                   </li>
                   <li className="flex items-center gap-1.5 text-[var(--ide-text)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--ide-accent)] shrink-0" />
                     <span>Technical skills</span>
                   </li>
                   <li className="flex items-center gap-1.5 text-[var(--ide-text)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--ide-accent)] shrink-0" />
                     <span>Education and GPA</span>
                   </li>
                   <li className="flex items-center gap-1.5 text-[var(--ide-text)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--ide-accent)] shrink-0" />
                     <span>Coding / problem-solving profile</span>
                   </li>
                   <li className="flex items-center gap-1.5 text-[var(--ide-text)]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[var(--ide-accent)] shrink-0" />
                     <span>Resume and contact information</span>
                   </li>
                 </ul>
@@ -186,7 +186,7 @@ export const PortfolioEntryModal: React.FC = () => {
                 e.stopPropagation();
                 handleSelect('recruiter');
               }}
-              className="mt-6 w-full py-2.5 px-4 rounded bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
+              className="mt-6 w-full py-2.5 px-4 rounded bg-[var(--ide-accent)] hover:bg-[var(--ide-accent-hover)] text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
             >
               <span>Open Recruiter View</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -196,11 +196,11 @@ export const PortfolioEntryModal: React.FC = () => {
           {/* OPTION 2 — FULL PORTFOLIO */}
           <div 
             onClick={() => handleSelect('developer')}
-            className="group relative p-5 rounded-lg bg-[var(--ide-bg)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between"
+            className="group relative p-5 rounded bg-[var(--ide-bg)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] transition-colors cursor-pointer flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] text-[10px] font-mono text-[var(--ide-text-muted)]">
+                <span className="text-[10px] font-mono text-[var(--ide-text-muted)] font-medium">
                   Interactive IDE
                 </span>
                 <span className="text-[10px] font-mono text-[var(--ide-text-muted)]">Full Workspace</span>
@@ -208,17 +208,17 @@ export const PortfolioEntryModal: React.FC = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded bg-[var(--ide-accent)]/10 border border-[var(--ide-accent)]/30 flex items-center justify-center text-[var(--ide-accent)] shrink-0">
+                  <div className="w-7 h-7 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-center justify-center text-[var(--ide-text)] shrink-0">
                     <Code2 className="w-4 h-4" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-[var(--ide-text)] group-hover:text-[var(--ide-accent)] transition-colors">
+                    <h3 className="text-sm font-bold text-white group-hover:text-[var(--ide-accent)] transition-colors">
                       Explore Full Portfolio
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-2xs text-[var(--ide-accent)] font-mono">
+                <p className="text-2xs text-[var(--ide-text-muted)] font-mono">
                   Explore the complete developer workspace.
                 </p>
 
@@ -261,7 +261,7 @@ export const PortfolioEntryModal: React.FC = () => {
                 e.stopPropagation();
                 handleSelect('developer');
               }}
-              className="mt-6 w-full py-2.5 px-4 rounded bg-[var(--ide-sidebar)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] text-[var(--ide-text)] font-semibold text-xs flex items-center justify-center gap-2 transition-all active:scale-95 group-hover:border-[var(--ide-accent)]"
+              className="mt-6 w-full py-2.5 px-4 rounded bg-[var(--ide-sidebar)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors"
             >
               <span>Explore Portfolio</span>
               <ArrowRight className="w-3.5 h-3.5" />

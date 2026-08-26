@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import { 
   ChevronDown, 
   ChevronRight, 
-  Layers,
-  Sparkles
+  Layers
 } from 'lucide-react';
 import { useWorkspace } from '@/context/WorkspaceContext';
 import { virtualFileSystem } from '@/data/fileSystem';
@@ -69,13 +68,13 @@ export const Explorer: React.FC = () => {
               {item.name}
             </span>
             {item.category === 'projects' && (
-              <span className="ml-auto text-[9px] px-1 bg-sky-500/20 text-sky-400 rounded font-mono">
+              <span className="ml-auto text-[10px] text-[var(--ide-text-muted)] font-mono">
                 6
               </span>
             )}
             {item.category === 'coding' && (
-              <span className="ml-auto text-[9px] px-1 bg-amber-500/20 text-amber-400 rounded font-mono">
-                Live
+              <span className="ml-auto text-[10px] text-[var(--ide-text-muted)] font-mono">
+                live
               </span>
             )}
           </button>
@@ -140,16 +139,13 @@ export const Explorer: React.FC = () => {
         {renderItem(virtualFileSystem, 0)}
       </div>
 
-      {/* Workspace Quick Overview Footer */}
-      <div className="p-2 border-t border-[var(--ide-border)] bg-[var(--ide-bg)]/40 text-2xs text-[var(--ide-text-muted)] flex flex-col gap-1">
+      {/* Workspace Candidate Summary Footer */}
+      <div className="p-2.5 border-t border-[var(--ide-border)] bg-[var(--ide-bg)]/30 text-2xs text-[var(--ide-text-muted)] flex flex-col gap-1">
         <div className="flex items-center justify-between">
-          <span className="text-[var(--ide-text)] font-semibold flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-amber-400" />
-            <span>Candidate Info</span>
-          </span>
-          <span className="font-mono text-emerald-400 font-bold">9.30 CGPA</span>
+          <span className="text-[var(--ide-text)] font-semibold">Candidate Info</span>
+          <span className="font-mono text-[var(--ide-accent)] font-medium">CGPA 9.30</span>
         </div>
-        <div className="text-[11px] truncate">Bhavishya Gupta • SDE Intern</div>
+        <div className="text-[11px] text-[var(--ide-text-muted)] truncate">Bhavishya Gupta · SDE Intern</div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink, RefreshCw, Award, Flame, CheckCircle, Code, Layers, Zap, Info, Check, AlertCircle } from 'lucide-react';
+import { ExternalLink, RefreshCw, Award, CheckCircle, Code, Layers, Info, Check, AlertCircle } from 'lucide-react';
 import { GfgData } from '@/lib/coding/gfg';
 import { Code360Data } from '@/lib/coding/code360';
 
@@ -70,7 +70,7 @@ export const GfgCode360Workspace: React.FC = () => {
               <h1 className="text-base sm:text-lg font-bold text-white tracking-wide">
                 GeeksforGeeks & Code360 Profiles
               </h1>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full border bg-amber-500/10 text-amber-300 border-amber-500/30">
+              <span className="text-2xs font-mono px-2 py-0.5 rounded border bg-amber-500/10 text-amber-300 border-amber-500/30">
                 ● Verified Candidate Snapshot
               </span>
             </div>

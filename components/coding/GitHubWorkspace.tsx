@@ -127,7 +127,7 @@ export const GitHubWorkspace: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[var(--ide-border)]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center font-bold text-sky-400 text-lg shrink-0">
+            <div className="w-10 h-10 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-center justify-center text-white shrink-0">
               <Github className="w-5 h-5" />
             </div>
             <div>
@@ -136,7 +136,7 @@ export const GitHubWorkspace: React.FC = () => {
                   GitHub Live Engineering Analytics
                 </h1>
                 {data && (
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${
+                  <span className={`text-2xs font-mono px-2 py-0.5 rounded border ${
                     data.dataStatus === 'LIVE' 
                       ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
                       : data.dataStatus === 'CACHED'

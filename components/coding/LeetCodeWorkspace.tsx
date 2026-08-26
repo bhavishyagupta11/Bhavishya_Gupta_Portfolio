@@ -1,7 +1,5 @@
-'use client';
-
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink, RefreshCw, Trophy, Flame, CheckCircle2, TrendingUp, Award, Calendar, AlertCircle, Check, Zap } from 'lucide-react';
+import { ExternalLink, RefreshCw, CheckCircle2, TrendingUp, Code2, Calendar, AlertCircle, Check } from 'lucide-react';
 import { LeetCodeData } from '@/lib/coding/leetcode';
 
 export const LeetCodeWorkspace: React.FC = () => {
@@ -70,7 +68,7 @@ export const LeetCodeWorkspace: React.FC = () => {
         {/* Top Header & Status Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[var(--ide-border)]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center font-bold text-amber-400 text-lg shrink-0">
+            <div className="w-10 h-10 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-center justify-center font-bold text-amber-400 text-sm font-mono shrink-0">
               LC
             </div>
             <div>
@@ -79,7 +77,7 @@ export const LeetCodeWorkspace: React.FC = () => {
                   LeetCode Analytics & Problem Solving
                 </h1>
                 {data && (
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${
+                  <span className={`text-2xs font-mono px-2 py-0.5 rounded border ${
                     data.dataStatus === 'LIVE' 
                       ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
                       : 'bg-amber-500/10 text-amber-300 border-amber-500/30'
@@ -170,7 +168,7 @@ export const LeetCodeWorkspace: React.FC = () => {
               <div className="bg-[var(--ide-bg)] p-4 rounded-lg border border-[var(--ide-border)] relative overflow-hidden">
                 <div className="flex items-center justify-between text-2xs text-[var(--ide-text-muted)] font-mono uppercase tracking-wider mb-2">
                   <span>Problems Solved</span>
-                  <Award className="w-4 h-4 text-amber-400" />
+                  <Code2 className="w-4 h-4 text-amber-400" />
                 </div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-bold font-mono text-white tracking-tight">
@@ -220,7 +218,7 @@ export const LeetCodeWorkspace: React.FC = () => {
                 <div>
                   <div className="flex items-center justify-between text-2xs text-[var(--ide-text-muted)] font-mono uppercase tracking-wider mb-2">
                     <span>Contest Performance</span>
-                    <Trophy className="w-4 h-4 text-amber-400" />
+                    <TrendingUp className="w-4 h-4 text-amber-400" />
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-bold font-mono text-amber-400 tracking-tight">
@@ -252,7 +250,7 @@ export const LeetCodeWorkspace: React.FC = () => {
                 <div>
                   <div className="flex items-center justify-between text-2xs text-[var(--ide-text-muted)] font-mono uppercase tracking-wider mb-2">
                     <span>Problem Solving Streak</span>
-                    <Flame className="w-4 h-4 text-orange-400" />
+                    <Calendar className="w-4 h-4 text-[var(--ide-accent)]" />
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-bold font-mono text-orange-400 tracking-tight">

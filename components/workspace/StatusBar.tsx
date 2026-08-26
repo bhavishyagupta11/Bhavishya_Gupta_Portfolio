@@ -7,7 +7,6 @@ import {
   AlertCircle, 
   Bell, 
   Terminal, 
-  Sparkles, 
   FileCode2, 
   Cpu, 
   Activity

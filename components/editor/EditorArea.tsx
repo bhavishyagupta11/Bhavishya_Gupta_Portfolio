@@ -14,7 +14,7 @@ import { GfgCode360Workspace } from '../coding/GfgCode360Workspace';
 import { GitHubWorkspace } from '../coding/GitHubWorkspace';
 import { CodolioWorkspace } from '../coding/CodolioWorkspace';
 import { projectsData } from '@/data/projects';
-import { Sparkles } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 export const EditorArea: React.FC = () => {
   const { 
@@ -32,7 +32,7 @@ export const EditorArea: React.FC = () => {
         <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
           <div className="max-w-md space-y-4">
             <div className="w-16 h-16 rounded-2xl bg-[var(--ide-accent)]/10 border border-[var(--ide-accent)]/30 flex items-center justify-center mx-auto text-[var(--ide-accent)]">
-              <Sparkles className="w-8 h-8" />
+              <Code2 className="w-8 h-8" />
             </div>
             <div>
               <h2 className="text-xl font-bold text-white tracking-wide">BG Studio Workspace</h2>

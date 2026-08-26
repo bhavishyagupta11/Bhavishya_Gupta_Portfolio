@@ -71,8 +71,8 @@ export const CodeViewer: React.FC<CodeViewerProps> = ({
             <span>{filename}</span>
           </div>
           <span className="opacity-60">• {lines.length} lines</span>
-          <span className="hidden sm:inline px-1.5 py-0.2 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] text-[10px] text-emerald-400 font-mono">
-            Representative Core Implementation
+          <span className="hidden sm:inline text-2xs text-[var(--ide-text-muted)] font-mono">
+            • Representative Source
           </span>
         </div>
 

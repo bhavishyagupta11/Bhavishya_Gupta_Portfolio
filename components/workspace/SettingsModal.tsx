@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { X, Settings, Palette, Keyboard, UserCheck, Code2, Sparkles, Check } from 'lucide-react';
+import { X, Settings, Palette, Keyboard, UserCheck, Code2, Check } from 'lucide-react';
 import { useWorkspace } from '@/context/WorkspaceContext';
 import { ThemeName, WorkspaceMode } from '@/types';
 
@@ -122,8 +122,8 @@ export const SettingsModal: React.FC = () => {
                 }`}
               >
                 <div className="font-semibold text-xs text-amber-400 flex items-center gap-1.5 mb-1">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Recruiter 30-Second Mode</span>
+                  <UserCheck className="w-3.5 h-3.5" />
+                  <span>Recruiter Summary Mode</span>
                 </div>
                 <div className="text-2xs text-[var(--ide-text-muted)] leading-snug">
                   High-velocity executive summary designed for hiring managers and recruiters.
