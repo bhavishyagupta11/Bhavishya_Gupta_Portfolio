@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Copy, Check, ExternalLink, Send, MapPin, Sparkles } from 'lucide-react';
+import { Mail, Linkedin, Github, Copy, Check, ExternalLink, Send, MapPin } from 'lucide-react';
 import { profileData } from '@/data/profile';
 import { CodeViewer } from './CodeViewer';
 
@@ -81,14 +81,14 @@ export async function sendMessage(inquiry: { name: string; email: string; messag
           </div>
 
           {/* Email Copy Card */}
-          <div className="p-4 md:p-5 rounded-lg bg-[var(--ide-sidebar)] border border-[var(--ide-border)] mb-6 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-md">
+          <div className="p-4 md:p-5 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] mb-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="p-3 rounded-full bg-[var(--ide-accent)]/10 text-[var(--ide-accent)]">
-                <Mail className="w-6 h-6" />
+              <div className="p-2.5 rounded bg-[var(--ide-bg)] border border-[var(--ide-border)] text-[var(--ide-accent)]">
+                <Mail className="w-5 h-5" />
               </div>
               <div className="text-center sm:text-left">
                 <div className="text-2xs uppercase tracking-wider text-[var(--ide-text-muted)] font-mono">Direct Email</div>
-                <div className="text-sm md:text-base font-bold font-mono text-[var(--ide-text)]">{profileData.email}</div>
+                <div className="text-sm md:text-base font-bold font-mono text-white">{profileData.email}</div>
               </div>
             </div>
 
@@ -117,7 +117,7 @@ export async function sendMessage(inquiry: { name: string; email: string; messag
               href={profileData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-lg bg-[var(--ide-sidebar)]/80 border border-[var(--ide-border)] hover:border-sky-500/50 hover:bg-[var(--ide-hover)] flex items-center justify-between group transition-all"
+              className="p-4 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] hover:bg-[var(--ide-hover)] flex items-center justify-between group transition-colors"
             >
               <div className="flex items-center gap-3">
                 <Linkedin className="w-5 h-5 text-sky-400" />
@@ -133,7 +133,7 @@ export async function sendMessage(inquiry: { name: string; email: string; messag
               href={profileData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-lg bg-[var(--ide-sidebar)]/80 border border-[var(--ide-border)] hover:border-[var(--ide-accent)] hover:bg-[var(--ide-hover)] flex items-center justify-between group transition-all"
+              className="p-4 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] hover:bg-[var(--ide-hover)] flex items-center justify-between group transition-colors"
             >
               <div className="flex items-center gap-3">
                 <Github className="w-5 h-5 text-white" />
