@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ExternalLink, RefreshCw, BarChart2, CheckCircle2, Award, Calendar, Compass, ShieldCheck, Info, Check, AlertCircle } from 'lucide-react';
+import { ExternalLink, RefreshCw, BarChart2, CheckCircle2, Calendar, Compass, ShieldCheck, Info, Check, AlertCircle } from 'lucide-react';
 import { CodolioData } from '@/lib/coding/codolio';
 
 export const CodolioWorkspace: React.FC = () => {
