@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Layers, Search, ExternalLink, Code2, Sparkles, Filter } from 'lucide-react';
+import { Layers, Search, ExternalLink, Code2, Filter } from 'lucide-react';
 import { useWorkspace } from '@/context/WorkspaceContext';
 import { projectsData } from '@/data/projects';
 import { FileIcon } from '@/components/common/FileIcon';
