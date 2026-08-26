@@ -16,7 +16,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "Inter-College Coding Championship",
     dateOrYear: "2024",
     description: "Ranked 1st among 25 competitive programming teams by solving algorithmic challenges under strict time constraints.",
-    badge: "🏆 1st of 25 Teams"
+    badge: "1st among 25 teams"
   },
   {
     id: "codeathon-finalist",
@@ -25,7 +25,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "Regional Coding Hackathon",
     dateOrYear: "2024",
     description: "Advanced to the Top 10 finalist pool out of 500+ student participants after multi-round algorithmic and development assessments.",
-    badge: "🏅 Top 10 of 500+"
+    badge: "Top 10 of 500+"
   },
   {
     id: "dsa-810",
@@ -34,7 +34,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "LeetCode, GeeksForGeeks, Code360",
     dateOrYear: "2024 - 2026",
     description: "Demonstrated sustained problem-solving discipline with 629 solved on LeetCode (1779 contest rating, 328-day streak), 120+ on GFG, and 70+ on Code360.",
-    badge: "⚡ 810+ Solved"
+    badge: "810+ Solved"
   },
   {
     id: "servicenow-csa-cad",
@@ -43,7 +43,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "ServiceNow, Jaipur (Virtual)",
     dateOrYear: "Jun 2026",
     description: "Certified System Administrator (CSA) and Certified Application Developer (CAD) credentials validating enterprise application architecture.",
-    badge: "📜 Certified (Jun 2026)"
+    badge: "Certified · Jun 2026"
   },
   {
     id: "mckinsey-forward",
@@ -52,7 +52,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "McKinsey & Company",
     dateOrYear: "Jun 2026",
     description: "Selected and graduated from the competitive McKinsey Forward program focusing on structured problem-solving, digital agility, and leadership.",
-    badge: "💼 Certified (Jun 2026)"
+    badge: "Certified · Jun 2026"
   },
   {
     id: "samatrix-ai",
@@ -61,7 +61,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "Samatrix.io, Jaipur",
     dateOrYear: "2023 - 2026",
     description: "Completed comprehensive certifications covering Probability Modeling & Statistics, Deep Learning, and Neural Networks.",
-    badge: "🧠 AI Certified"
+    badge: "AI & Data Science"
   },
   {
     id: "gcp-foundation",
@@ -70,7 +70,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "Google Cloud",
     dateOrYear: "2024",
     description: "Completed foundation training in cloud infrastructure, compute engines, storage buckets, and IAM security principles.",
-    badge: "☁️ Cloud"
+    badge: "Cloud Computing"
   },
   {
     id: "nptel-elite",
@@ -79,7 +79,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "NPTEL / IIT",
     dateOrYear: "2023",
     description: "Scored 99/100 in the nationwide NPTEL certification exam, earning an Elite medal certification.",
-    badge: "🎖️ Elite (99/100)"
+    badge: "Elite (Score: 99/100)"
   },
   {
     id: "mygov-ambassador",
@@ -88,7 +88,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "MyGov India (Government of India)",
     dateOrYear: "2024",
     description: "Organized 5+ digital governance and tech outreach initiatives engaging over 2,500 students across campus.",
-    badge: "🌟 2500+ Students"
+    badge: "2,500+ Students"
   },
   {
     id: "bits-ambassador",
@@ -97,7 +97,7 @@ export const achievementsData: AchievementItem[] = [
     issuerOrEvent: "BITS Pilani",
     dateOrYear: "2024",
     description: "Mobilized 100+ student delegations to participate in annual technical festival events and project showcases.",
-    badge: "🤝 100+ Delegates"
+    badge: "100+ Delegates"
   }
 ];
 
