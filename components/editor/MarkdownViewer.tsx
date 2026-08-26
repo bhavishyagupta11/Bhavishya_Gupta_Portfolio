@@ -6,21 +6,14 @@ import { profileData } from '@/data/profile';
 import { codingProfiles } from '@/data/coding';
 import { achievementsData, competitionsData, leadershipData } from '@/data/achievements';
 import { 
-  FileText, 
   ExternalLink, 
-  Sparkles, 
   Download, 
   Github, 
   Linkedin, 
-  Award, 
   Code2, 
   CheckCircle2, 
   Terminal, 
   ArrowRight,
-  BookOpen,
-  Trophy,
-  Zap,
-  Flame,
   Check
 } from 'lucide-react';
 
@@ -37,9 +30,9 @@ export const MarkdownViewer: React.FC<MarkdownViewerProps> = ({ fileId }) => {
       <div className="flex flex-col h-full bg-[var(--ide-editor)] text-[var(--ide-text)] p-4 md:p-8 overflow-y-auto max-w-4xl mx-auto font-sans">
         {/* Banner Hero */}
         <div className="border-b border-[var(--ide-border)] pb-6 mb-6">
-          <div className="flex items-center gap-2 text-2xs font-mono text-[var(--ide-accent)] mb-2 uppercase tracking-wider">
-            <Terminal className="w-3.5 h-3.5" />
-            <span>BG_STUDIO_WORKSPACE.INIT()</span>
+          <div className="flex items-center gap-2 text-2xs font-mono text-[var(--ide-text-muted)] mb-2 uppercase tracking-wider">
+            <Terminal className="w-3.5 h-3.5 text-[var(--ide-accent)]" />
+            <span>bhavishyagupta / README.md</span>
           </div>
 
           <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-[var(--ide-text)] mb-2">
@@ -112,89 +105,108 @@ export const MarkdownViewer: React.FC<MarkdownViewerProps> = ({ fileId }) => {
           <div className="bg-[var(--ide-sidebar)] p-3 rounded-lg border border-[var(--ide-border)]">
             <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">LeetCode Rating</div>
             <div className="text-xl font-bold font-mono text-emerald-400 mt-0.5">1779</div>
-            <div className="text-2xs text-emerald-400 font-semibold">Top 9.2% Global</div>
+            <div className="text-2xs text-[var(--ide-text-muted)]">Top 9.2% Global</div>
           </div>
           <div className="bg-[var(--ide-sidebar)] p-3 rounded-lg border border-[var(--ide-border)]">
-            <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">B.Tech CGPA</div>
+            <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">Academic Record</div>
             <div className="text-xl font-bold font-mono text-white mt-0.5">9.30</div>
-            <div className="text-2xs text-[var(--ide-text-muted)]">JECRC (2023–27)</div>
+            <div className="text-2xs text-[var(--ide-text-muted)]">B.Tech CGPA</div>
           </div>
           <div className="bg-[var(--ide-sidebar)] p-3 rounded-lg border border-[var(--ide-border)]">
-            <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">Internship</div>
-            <div className="text-xl font-bold font-mono text-sky-400 mt-0.5">SDE Intern</div>
+            <div className="text-2xs font-mono text-[var(--ide-text-muted)] uppercase">Work Experience</div>
+            <div className="text-xl font-bold font-mono text-cyan-400 mt-0.5">SDE Intern</div>
             <div className="text-2xs text-[var(--ide-text-muted)]">Ghai Technologies</div>
           </div>
         </div>
 
-        {/* Fast Workspace Navigators */}
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-xs font-bold text-white uppercase font-mono tracking-wider mb-3">
-              // Featured Shipped Projects
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div 
-                onClick={() => openFile('futuremedia-tsx')}
-                className="p-3.5 rounded-lg bg-[var(--ide-sidebar)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-sm text-[var(--ide-text)] group-hover:text-[var(--ide-accent)]">FutureMedia.tsx</span>
-                  <span className="text-2xs text-emerald-400 font-mono">Full Stack</span>
-                </div>
-                <p className="text-2xs text-[var(--ide-text-muted)] mt-1 line-clamp-2">
-                  Social media platform with Docker Compose, Redis BullMQ async queues, and Socket.io real-time chat.
-                </p>
-              </div>
+        {/* Featured Projects Highlight */}
+        <div className="space-y-4 mb-8">
+          <div className="flex items-center justify-between border-b border-[var(--ide-border)] pb-2">
+            <div className="text-xs font-bold text-white uppercase font-mono tracking-wider">
+              // Core Production Projects
+            </div>
+            <button
+              onClick={() => openFile('scholrboard-tsx')}
+              className="text-2xs text-[var(--ide-accent)] hover:underline font-mono"
+            >
+              Inspect All Files →
+            </button>
+          </div>
 
-              <div 
-                onClick={() => openFile('scholrboard-tsx')}
-                className="p-3.5 rounded-lg bg-[var(--ide-sidebar)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-sm text-[var(--ide-text)] group-hover:text-[var(--ide-accent)]">ScholrBoard.tsx</span>
-                  <span className="text-2xs text-sky-400 font-mono">MERN • Live</span>
-                </div>
-                <p className="text-2xs text-[var(--ide-text-muted)] mt-1 line-clamp-2">
-                  Student achievement and placement ecosystem with 4-tier RBAC and 6-stage verification pipeline.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div 
+              onClick={() => openFile('scholrboard-tsx')}
+              className="p-4 rounded-lg bg-[var(--ide-sidebar)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer group transition-colors"
+            >
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="font-bold text-sm text-white group-hover:text-[var(--ide-accent)] transition-colors">
+                  ScholrBoard
+                </span>
+                <span className="text-2xs font-mono px-2 py-0.5 rounded bg-[var(--ide-bg)] text-[var(--ide-accent)] border border-[var(--ide-border)]">
+                  MERN Stack
+                </span>
               </div>
-
-              <div 
-                onClick={() => openFile('cogniflow-tsx')}
-                className="p-3.5 rounded-lg bg-[var(--ide-sidebar)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-sm text-[var(--ide-text)] group-hover:text-[var(--ide-accent)]">CogniFlow.tsx</span>
-                  <span className="text-2xs text-purple-400 font-mono">AI / ML</span>
-                </div>
-                <p className="text-2xs text-[var(--ide-text-muted)] mt-1 line-clamp-2">
-                  Multi-agent RAG research synthesis engine with TF-IDF and Maximal Marginal Relevance (MMR) reranking.
-                </p>
-              </div>
-
-              <div 
-                onClick={() => openFile('leetcode-md')}
-                className="p-3.5 rounded-lg bg-[var(--ide-sidebar)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer transition-all group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-sm text-[var(--ide-text)] group-hover:text-[var(--ide-accent)]">leetcode.md</span>
-                  <span className="text-2xs text-amber-400 font-mono">Live CP</span>
-                </div>
-                <p className="text-2xs text-[var(--ide-text-muted)] mt-1 line-clamp-2">
-                  Real-time problem solving analytics, contest rating (1779), and active solving streak (260+ days).
-                </p>
+              <p className="text-xs text-[var(--ide-text-muted)] leading-relaxed mb-3">
+                Centralized student placement management ecosystem with 4 distinct roles and 6-stage approval pipelines.
+              </p>
+              <div className="text-2xs font-mono text-[var(--ide-text-muted)]">
+                React • Node.js • MongoDB • JWT • Cloudinary
               </div>
             </div>
+
+            <div 
+              onClick={() => openFile('futuremedia-tsx')}
+              className="p-4 rounded-lg bg-[var(--ide-sidebar)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer group transition-colors"
+            >
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="font-bold text-sm text-white group-hover:text-[var(--ide-accent)] transition-colors">
+                  FutureMedia
+                </span>
+                <span className="text-2xs font-mono px-2 py-0.5 rounded bg-[var(--ide-bg)] text-[var(--ide-accent)] border border-[var(--ide-border)]">
+                  Full Stack
+                </span>
+              </div>
+              <p className="text-xs text-[var(--ide-text-muted)] leading-relaxed mb-3">
+                Social media platform with async Redis BullMQ queues, Socket.io chat, and Docker Compose orchestration.
+              </p>
+              <div className="text-2xs font-mono text-[var(--ide-text-muted)]">
+                React • Node.js • BullMQ • Redis • Docker
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Live Coding Snapshot */}
+        <div className="space-y-4">
+          <div className="text-xs font-bold text-white uppercase font-mono tracking-wider border-b border-[var(--ide-border)] pb-2">
+            // Competitive Programming & Platforms
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+            {codingProfiles.map(p => (
+              <div
+                key={p.platform}
+                onClick={() => openFile(p.platform === 'LeetCode' ? 'leetcode-md' : p.platform === 'Codolio' ? 'codolio-md' : 'gfg-code360-md')}
+                className="p-3 rounded-lg bg-[var(--ide-sidebar)] border border-[var(--ide-border)] hover:border-[var(--ide-accent)] cursor-pointer transition-colors"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-white">{p.platform}</span>
+                  <span className="text-2xs text-[var(--ide-text-muted)] font-mono">@{p.handle}</span>
+                </div>
+                <div className="text-base font-bold font-mono text-emerald-400 mt-2">{p.stats[0]?.value || 'Active'}</div>
+                <div className="text-2xs text-[var(--ide-text-muted)] font-mono">{p.stats[1]?.label}: {p.stats[1]?.value}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     );
   }
 
-  // 2. about.md
+  // 2. about.md (In-depth background, biography, engineering philosophy)
   if (fileId === 'about-md') {
     return (
-      <div className="flex flex-col h-full bg-[var(--ide-editor)] text-[var(--ide-text)] p-4 md:p-8 overflow-y-auto max-w-4xl mx-auto font-sans leading-relaxed space-y-6">
+      <div className="flex flex-col h-full bg-[var(--ide-editor)] text-[var(--ide-text)] p-4 md:p-8 overflow-y-auto max-w-3xl mx-auto font-sans space-y-6">
         <div className="border-b border-[var(--ide-border)] pb-4">
           <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
             About Bhavishya Gupta
@@ -247,38 +259,47 @@ export const MarkdownViewer: React.FC<MarkdownViewerProps> = ({ fileId }) => {
           <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
             Honors, Awards & Milestones
           </h1>
-          <p className="text-xs text-[var(--ide-accent)] font-mono mt-1">
+          <p className="text-xs text-[var(--ide-text-muted)] font-mono mt-1">
             Competitive Programming Victories, Hackathon Finalists & Certifications
           </p>
         </div>
 
-        <div className="space-y-4">
-          {competitionsData.map((comp, idx) => (
-            <div key={idx} className="p-4 rounded-lg bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-start gap-3">
-              <Trophy className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-              <div className="space-y-1">
-                <div className="flex flex-wrap items-center gap-2">
+        <div className="space-y-6">
+          <div className="space-y-3">
+            <h2 className="text-xs font-bold text-white font-mono uppercase tracking-wider">// Competitions & Hackathons</h2>
+            {competitionsData.map((comp, idx) => (
+              <div key={idx} className="p-4 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] space-y-1.5">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="font-bold text-sm text-white">{comp.title}</h3>
-                  <span className="px-2 py-0.5 rounded bg-[var(--ide-bg)] text-2xs font-mono text-emerald-400 border border-[var(--ide-border)]">
-                    {comp.badge || comp.category}
-                  </span>
+                  <span className="text-2xs font-mono text-[var(--ide-accent)]">{comp.issuerOrEvent} · {comp.dateOrYear}</span>
                 </div>
-                <div className="text-2xs text-[var(--ide-accent)] font-mono">{comp.issuerOrEvent} • {comp.dateOrYear}</div>
+                {comp.badge && (
+                  <div className="text-xs font-mono text-emerald-400 font-medium">
+                    {comp.badge}
+                  </div>
+                )}
                 <p className="text-xs text-[var(--ide-text-muted)] leading-relaxed">{comp.description}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
-          {leadershipData.map((lead, idx) => (
-            <div key={idx} className="p-4 rounded-lg bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-start gap-3">
-              <Award className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
-              <div className="space-y-1">
-                <h3 className="font-bold text-sm text-white">{lead.title}</h3>
-                <div className="text-2xs text-[var(--ide-text-muted)] font-mono">{lead.issuerOrEvent} • {lead.dateOrYear}</div>
+          <div className="space-y-3 pt-2">
+            <h2 className="text-xs font-bold text-white font-mono uppercase tracking-wider">// Leadership & Technical Outreach</h2>
+            {leadershipData.map((lead, idx) => (
+              <div key={idx} className="p-4 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] space-y-1.5">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <h3 className="font-bold text-sm text-white">{lead.title}</h3>
+                  <span className="text-2xs font-mono text-[var(--ide-text-muted)]">{lead.issuerOrEvent} · {lead.dateOrYear}</span>
+                </div>
+                {lead.badge && (
+                  <div className="text-xs font-mono text-sky-400 font-medium">
+                    {lead.badge}
+                  </div>
+                )}
                 <p className="text-xs text-[var(--ide-text-muted)] leading-relaxed">{lead.description}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     );
