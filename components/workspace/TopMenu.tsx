@@ -7,6 +7,7 @@ import {
   Search, 
   UserCheck, 
   Code,
+  Code2,
   FileText,
   SlidersHorizontal,
   ChevronDown
@@ -225,16 +226,21 @@ export const TopMenu: React.FC = () => {
         {/* Recruiter Mode Interactive Switch */}
         <button
           onClick={() => setMode(mode === 'recruiter' ? 'developer' : 'recruiter')}
-          className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-2xs font-semibold border shadow-sm transition-all ${
-            mode === 'recruiter'
-              ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 hover:bg-amber-500/30'
-              : 'bg-emerald-500/15 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/25 hover:shadow-md'
-          }`}
-          title={mode === 'recruiter' ? 'Return to Developer Workspace' : 'Switch to 30-Second Recruiter Summary'}
+          className="flex items-center gap-1.5 px-3 py-1 rounded text-2xs font-semibold bg-[var(--ide-bg)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] text-[var(--ide-text)] hover:text-white transition-colors"
+          title={mode === 'recruiter' ? 'Return to Developer Workspace' : 'Switch to Recruiter View'}
           aria-pressed={mode === 'recruiter'}
         >
-          <UserCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span>{mode === 'recruiter' ? '⚡ Return to IDE' : 'Recruiter Mode'}</span>
+          {mode === 'recruiter' ? (
+            <>
+              <Code2 className="w-3.5 h-3.5 text-[var(--ide-accent)]" />
+              <span>Return to IDE</span>
+            </>
+          ) : (
+            <>
+              <UserCheck className="w-3.5 h-3.5 text-[var(--ide-text-muted)]" />
+              <span>Recruiter View</span>
+            </>
+          )}
         </button>
       </div>
     </header>
