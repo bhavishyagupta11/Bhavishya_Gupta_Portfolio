@@ -50,7 +50,7 @@ export const GithubView: React.FC = () => {
         {/* Profile mini-card */}
         <div className="bg-[var(--ide-bg)] p-3 rounded border border-[var(--ide-border)] flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center font-bold text-emerald-400 text-sm">
+            <div className="w-9 h-9 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] flex items-center justify-center font-bold text-white text-xs font-mono">
               BG
             </div>
             <div>
@@ -62,7 +62,7 @@ export const GithubView: React.FC = () => {
           <span className={`text-[9px] font-mono px-1.5 py-0.5 rounded border flex items-center gap-1 ${
             isLive ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30' : 'bg-[var(--ide-sidebar)] text-[var(--ide-text-muted)] border-[var(--ide-border)]'
           }`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-emerald-400 animate-pulse' : 'bg-neutral-400'}`} />
+            <span className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-emerald-400' : 'bg-neutral-400'}`} />
             <span>{isLive ? 'Live API' : 'Snapshot'}</span>
           </span>
         </div>
