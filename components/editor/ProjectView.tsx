@@ -13,9 +13,7 @@ import {
   Layers, 
   Code2, 
   AlertTriangle, 
-  Award, 
   GitBranch, 
-  Sparkles,
   ArrowRight
 } from 'lucide-react';
 
@@ -80,11 +78,10 @@ export const ProjectView: React.FC<ProjectViewProps> = ({ project }) => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-xs text-emerald-300 font-semibold transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[var(--ide-bg)] hover:bg-[var(--ide-hover)] border border-[var(--ide-border)] text-xs text-[var(--ide-text)] hover:text-white font-medium transition-colors"
               >
-                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Live Demo</span>
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
             )}
           </div>
@@ -240,7 +237,7 @@ export const ProjectView: React.FC<ProjectViewProps> = ({ project }) => {
           {project.results && project.results.length > 0 && (
             <div className="p-4 rounded bg-[var(--ide-sidebar)]/60 border border-[var(--ide-border)]">
               <h4 className="text-2xs uppercase tracking-wider text-emerald-400 font-mono font-bold mb-2 flex items-center gap-1.5">
-                <Award className="w-3.5 h-3.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Verified Results</span>
               </h4>
               <ul className="space-y-1.5 text-xs text-[var(--ide-text-muted)]">
