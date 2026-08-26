@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ProjectArchitectureNode } from '@/types';
-import { Layers, ArrowRight, Info, Cpu, Server, Database, Sparkles, Cloud } from 'lucide-react';
+import { Layers, ArrowRight, Info, Cpu, Server, Database, Brain, Cloud } from 'lucide-react';
 
 interface ArchitectureDiagramProps {
   projectName: string;
@@ -22,7 +22,7 @@ export const ArchitectureDiagram: React.FC<ArchitectureDiagramProps> = ({
       case 'client': return <Layers className="w-4 h-4 text-sky-400" />;
       case 'api': return <Server className="w-4 h-4 text-emerald-400" />;
       case 'data': return <Database className="w-4 h-4 text-amber-400" />;
-      case 'ai': return <Sparkles className="w-4 h-4 text-purple-400" />;
+      case 'ai': return <Brain className="w-4 h-4 text-purple-400" />;
       case 'infra': return <Cloud className="w-4 h-4 text-cyan-400" />;
       default: return <Cpu className="w-4 h-4 text-indigo-400" />;
     }
@@ -75,10 +75,10 @@ export const ArchitectureDiagram: React.FC<ArchitectureDiagramProps> = ({
                 <div key={node.id} className="flex flex-col items-center">
                   <div
                     onClick={() => setSelectedNodeId(node.id)}
-                    className={`w-full p-3.5 rounded-md border transition-all cursor-pointer flex items-center justify-between ${
+                    className={`w-full p-3.5 rounded-md border transition-colors cursor-pointer flex items-center justify-between ${
                       isSelected
-                        ? 'border-[var(--ide-accent)] bg-[var(--ide-selection)]/30 ring-1 ring-[var(--ide-accent)] shadow-lg'
-                        : 'border-[var(--ide-border)] bg-[var(--ide-sidebar)]/80 hover:border-[var(--ide-text-muted)]'
+                        ? 'border-[var(--ide-accent)] bg-[var(--ide-selection)]/20'
+                        : 'border-[var(--ide-border)] bg-[var(--ide-sidebar)] hover:border-[var(--ide-border-active)]'
                     }`}
                   >
                     <div className="flex items-center gap-3">
