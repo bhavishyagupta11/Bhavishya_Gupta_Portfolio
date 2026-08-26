@@ -6,7 +6,7 @@ import { educationData } from '@/data/education';
 import { skillsData } from '@/data/skills';
 import { achievementsData } from '@/data/achievements';
 import { CodeViewer } from './CodeViewer';
-import { Code2, LayoutList, Briefcase, GraduationCap, Award, Cpu } from 'lucide-react';
+import { Code2, LayoutList, Briefcase, GraduationCap, Cpu } from 'lucide-react';
 
 interface JsonViewerProps {
   fileId: string;
@@ -243,24 +243,21 @@ export const JsonViewer: React.FC<JsonViewerProps> = ({ fileId }) => {
           {fileId === 'certifications-json' && (
             <div className="space-y-4">
               <div className="pb-3 border-b border-[var(--ide-border)]">
-                <h1 className="text-xl font-bold flex items-center gap-2 text-[var(--ide-text)]">
-                  <Award className="w-5 h-5 text-amber-400" />
-                  <span>Certifications</span>
+                <h1 className="text-xl font-bold text-[var(--ide-text)]">
+                  Certifications
                 </h1>
+                <p className="text-xs text-[var(--ide-text-muted)] font-mono mt-1">
+                  Professional Credentials & Verified Technical Certifications
+                </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {achievementsData.filter(a => a.category === 'Certification').map(cert => (
-                  <div key={cert.id} className="p-4 rounded-lg bg-[var(--ide-sidebar)]/80 border border-[var(--ide-border)]">
-                    <div className="flex items-center justify-between mb-1">
-                      <h2 className="font-bold text-xs text-[var(--ide-text)]">{cert.title}</h2>
-                      {cert.badge && (
-                        <span className="text-2xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
-                          {cert.badge}
-                        </span>
-                      )}
+                  <div key={cert.id} className="p-4 rounded bg-[var(--ide-sidebar)] border border-[var(--ide-border)] space-y-2">
+                    <div>
+                      <h2 className="font-semibold text-xs text-white">{cert.title}</h2>
+                      <div className="text-2xs font-mono text-[var(--ide-accent)] mt-0.5">{cert.issuerOrEvent} · {cert.dateOrYear}</div>
                     </div>
-                    <div className="text-2xs font-mono text-[var(--ide-accent)] mb-2">{cert.issuerOrEvent} • {cert.dateOrYear}</div>
                     <p className="text-2xs text-[var(--ide-text-muted)] leading-relaxed">
                       {cert.description}
                     </p>
