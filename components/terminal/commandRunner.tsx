@@ -62,7 +62,7 @@ export function executeCommand(
           <div className="text-[var(--ide-accent)]">Software Engineer • Full Stack Developer • AI/ML Enthusiast</div>
           <div className="text-[var(--ide-text-muted)]">B.Tech CSE (AI & ML) @ JECRC University (CGPA: 9.30, 2023–2027)</div>
           <div className="text-amber-400">810+ DSA Solved (LeetCode Contest Rating: 1779) • SDE Intern @ Ghai Tech</div>
-          <div className="text-emerald-400">🟢 Status: {profileData.availability}</div>
+          <div><span className="text-[var(--ide-accent)] font-semibold">Status:</span> {profileData.availability}</div>
         </div>
       );
 
@@ -272,8 +272,8 @@ export function executeCommand(
             <div>[✓] AI/ML & RAG Architecture (CogniFlow, Intellex AI) : PASS</div>
             <div>[✓] Production Internship Experience (Ghai Technologies) : PASS</div>
             <div>[✓] Academic Foundation (B.Tech AI & ML, CGPA: 9.30, 2023–2027) : PASS</div>
-            <div className="text-amber-300 font-bold mt-2">
-              ★ Recommendation: Schedule Technical Interview immediately with Bhavishya Gupta!
+            <div className="text-white font-bold mt-2">
+              Recommendation: Schedule Technical Interview with Bhavishya Gupta
             </div>
             <div className="text-2xs text-[var(--ide-text-muted)] mt-1">
               Email: bhavishyagupta001@gmail.com
