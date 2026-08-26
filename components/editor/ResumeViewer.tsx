@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Download, ExternalLink, FileText, CheckCircle2, Award, Briefcase, GraduationCap, Eye } from 'lucide-react';
+import { Download, ExternalLink, FileText } from 'lucide-react';
 import { profileData } from '@/data/profile';
 import { experienceData } from '@/data/experience';
 import { educationData } from '@/data/education';
